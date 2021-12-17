@@ -1,0 +1,6 @@
+{
+  "extends": ["next", "prettier"],
+  "rules": {
+    "sort-imports": 0
+  }
+}
