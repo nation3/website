@@ -4,25 +4,24 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import Image from 'next/image'
 import Logo from '../public/logo.svg'
-import Twitter from '../public/twitter.svg'
 
 const navigation = [
-  { name: 'Manifesto', href: '#' },
-  { name: 'Thesis', href: '#' },
+  { name: 'Manifesto', href: '/manifesto' },
+  { name: 'Thesis', href: '/thesis' },
   { name: 'Team', href: '/team' },
   { name: 'Writings', href: '#' },
 ]
 
 export default function Layout({ children }) {
   return (
-    <div className="container mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
       <Popover>
-        <div className="relative pt-6 mb-6 z-10">
+        <div className="relative pt-6 mb-36 z-10">
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto cursor-pointer">
                 <Link href="/">
-                  <Image src={Logo} width={50} height={48} />
+                  <Image src={Logo} width={128} height={50} />
                 </Link>
                 <div className="mr-2 flex items-center md:hidden">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
@@ -32,7 +31,7 @@ export default function Layout({ children }) {
                 </div>
               </div>
             </div>
-            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-16">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -90,13 +89,14 @@ export default function Layout({ children }) {
       </Popover>
       {children}
       <footer className="mt-32 flex justify-between">
-        <p>Nation3</p>
+        <p>Nation3 2022</p>
         <a
-          className="flex align-center gap-2 text-sky-500"
+          className="flex align-center gap-2"
           href="https://twitter.com/Nation3VC"
         >
-          <Image src={Twitter} width={16} height={16} />
-          <p>@Nation3VC</p>
+          <p className="bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text">
+            @Nation3VC
+          </p>
         </a>
       </footer>
     </div>

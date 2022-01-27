@@ -1,28 +1,49 @@
 import Head from '../components/Head'
+import BigTitle from '../components/BigTitle'
+import Button from '../components/Button'
+import Image from 'next/image'
+import LuisPic from '../public/team/l.png'
+import AniPic from '../public/team/a.png'
 
 export default function Team() {
   return (
     <div>
       <Head title="Team" description="VC fund" image="" type="website" />
-      <h1 className="text-6xl leading-loose">Team</h1>
-      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16">
+      <BigTitle
+        text="Nation3 team"
+        gradientText="The humans behind the project"
+      />
+      <div className="flex grid grid-cols-1 md:grid-cols-2 gap-8 mt-16">
         <div>
-          <h2 className="text-4xl leading-loose">Luis Cuende</h2>
-          <p>
-            For the first time Web3 gives us the opportunity to un-bundle the
-            services that nation states provide, make them 100x better and
-            ensure they are community-owned. The result will be a new, open
-            source stack for running Web3-powered nation states: the Nation3
-            stack.
+          <Image src={LuisPic} layout="responsive" quality="100" />
+          <h2 className="text-2xl leading-loose mt-4">Luis Cuende</h2>
+          <p className="text-lg mb-6">
+            Started hacking on Linux at the age of 12, inspired by the free
+            software ethos. Co-founder of Aragon, bringing DAOs to their first
+            billion in AUM. Into crypto since 2011, co-founded the
+            Bitcoin timestamping startup Stampery (now Witnet).
+            <br></br>
+            <br></br>
+            Advisor to Decentraland, Keep, Status... Crypto-anarchist, writing
+            about crypto cities/nations first in 2013. Awakened by the 2008
+            crisis.
           </p>
+          <Button text="Follow" link="https://twitter.com/licuende" />
         </div>
         <div>
-          <h2 className="text-4xl leading-loose">Anastasiya Belyaeva</h2>
-          <p>
-            We have compiled a tech tree of what needs to be built to unlock the
-            nations and cities of the future. If you are building one of those
-            key components, please reach out, we would love to know more!
+          <Image src={AniPic} layout="responsive" quality="100" />
+          <h2 className="text-2xl leading-loose mt-4">Anastasiya Belyaeva</h2>
+          <p className="text-lg mb-6">
+            Became a VC at 20, first fintech & marketplaces (Firestartr), then
+            SaaS (OpenOcean), then Web3 (co-founded one of the first European
+            funds in the space, Fabric Ventures).
+            <br></br>
+            <br></br>
+            Host of Web3 Forum at CogX (10k-30k attendees) for 3 years Growth
+            advisor to PieDAO - asset allocation DAO. Crimean, seeing first-hand
+            the rampant issues of nation states even today.
           </p>
+          <Button text="Follow" link="https://twitter.com/anastasiyavc" />
         </div>
       </div>
     </div>
