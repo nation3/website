@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Layout({ children }) {
   return (
-    <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-8">
+    <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 overflow-x-hidden">
       <Popover>
         <div className="relative pt-6 mb-36 z-10">
           <nav className="relative flex items-center justify-between sm:h-10">
