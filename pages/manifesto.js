@@ -105,7 +105,7 @@ export default function Manifesto() {
           </div>
         </div>
       </div>
-      <div className="my-16 md:my-0 md:mb-32 lg:pl-64 lg:-mt-64">
+      <div className="my-16 md:my-0 md:mb-32 lg:-mt-16 xl:pl-64 xl:-mt-64">
         <h1 className="text-2xl tracking-loose sm:text-4xl md:text-5xl bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text mt-1 md:leading-tight">
           Their outdated, Industrial Era education system is producing human
           robots that memorize well but don't ask the why nor the what if.
