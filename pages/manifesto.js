@@ -138,7 +138,7 @@ export default function Manifesto() {
           </Quote>
         </div>
       </div>
-      <div class="-mx-8 lg:-mx-32">
+      <div class="-mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32">
         <Image src={Manifesto4}></Image>
         <div class="flex flex-col md:flex-row gap-12 bg-gradient-to-r from-n3blue via-n3green to-n3green text-white px-8 py-12 -mt-2 mb-16 lg:px-32 lg:py-40 lg:mb-32">
           <div class="basis-1/2">
@@ -242,7 +242,7 @@ export default function Manifesto() {
           collaborate on such jurisdictions, like Aragon.
         </p>
       </div>
-      <div class="bg-gradient-to-r from-n3blue via-n3green to-n3green px-8 py-4 my-8 md:px-16 md:py-24 md:my-16 -mx-8 lg:-mx-32 text-center">
+      <div class="bg-gradient-to-r from-n3blue via-n3green to-n3green px-8 py-4 my-8 md:px-16 md:py-24 md:my-16 -mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32 text-center">
         <h1 className="text-1xl tracking-loose text-white sm:text-5xl md:text-5xl font-display md:leading-tight">
           Bitcoin → Ethereum → DAOs → Digital nations
         </h1>
