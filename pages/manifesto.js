@@ -21,14 +21,14 @@ export default function Manifesto() {
     <div className="text-lg">
       <Head title="Team" description="VC fund" image="" type="website" />
       <BigTitle
-        text="It's time to re-invent the nation state."
+        text="Its time to re-invent the nation state."
         gradientText="Towards a peaceful world of interconnected communities."
       />
       <div className="my-16">
         <Image src={Manifesto1}></Image>
       </div>
-      <div class="flex flex-col md:flex-row gap-8 my-8 md:my-16">
-        <div class="basis-3/5">
+      <div className="flex flex-col md:flex-row gap-8 my-8 md:my-16">
+        <div className="basis-3/5">
           <p>
             Ever since the inception of Homo Sapiens, we have lived in tribes.
             <br></br>
@@ -45,7 +45,7 @@ export default function Manifesto() {
             Their ethos revolted around war, pride and sacrifice.
           </p>
         </div>
-        <div class="basis-2/5">
+        <div className="basis-2/5">
           <Quote author="Pope Eugene III (1145 - 1153)">
             Whoever devotedly undertakes and performs this most holy journey...
             shall have the enjoyment of eternal reward from the repayer of all
@@ -63,19 +63,19 @@ export default function Manifesto() {
           </p>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row gap-8 my-0 md:mt-24 md:mb-8">
-        <div class="basis-1/3"></div>
-        <div class="basis-2/3">
+      <div className="flex flex-col md:flex-row gap-8 my-0 md:mt-24 md:mb-8">
+        <div className="basis-1/3"></div>
+        <div className="basis-2/3">
           <Image src={Manifesto2}></Image>
         </div>
       </div>
-      <div class="flex flex-col md:flex-row gap-8 my-8 md:my-16 md:my-0 md:-ml-32">
-        <div class="hidden md:block basis-2/5">
+      <div className="flex flex-col md:flex-row gap-8 my-8 md:my-16 md:my-0 md:-ml-32">
+        <div className="hidden md:block basis-2/5">
           <Image src={Manifesto3}></Image>
         </div>
-        <div class="basis-3/5 mt-8 md:mt-16">
-          <div class="flex flex-col md:flex-row gap-8">
-            <div class="basis-1/2">
+        <div className="basis-3/5 mt-8 md:mt-16">
+          <div className="flex flex-col md:flex-row gap-8">
+            <div className="basis-1/2">
               <p>
                 As the Industrial Revolution came upon us, technology and mass
                 production took violence to a new level. With the increasing
@@ -89,7 +89,7 @@ export default function Manifesto() {
                 became profitable, justifying endless wars.
               </p>
             </div>
-            <div class="basis-1/2">
+            <div className="basis-1/2">
               <p>
                 Fast-forward to today, our nation states are still based on the
                 very same pillars of war, pride and sacrifice as those in the
@@ -116,8 +116,8 @@ export default function Manifesto() {
           Europe.
         </h1>
       </div>
-      <div class="flex flex-col md:flex-row gap-8 mb-8 md:mb-16">
-        <div class="basis-1/2">
+      <div className="flex flex-col md:flex-row gap-8 mb-8 md:mb-16">
+        <div className="basis-1/2">
           <p>
             The macro-institutions that governments are part of, such as WHO,
             are as clueless as the governments themselves. People reading Balaji
@@ -129,7 +129,7 @@ export default function Manifesto() {
             severe destruction of our planet — endangering our whole species.
           </p>
         </div>
-        <div class="basis-1/2">
+        <div className="basis-1/2">
           <Quote author="The Sovereign Individual">
             A system that routinely submits control over the largest, most
             deadly enterprises on earth to the winner of popularity contests
@@ -138,10 +138,10 @@ export default function Manifesto() {
           </Quote>
         </div>
       </div>
-      <div class="-mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32">
+      <div className="-mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32">
         <Image src={Manifesto4}></Image>
-        <div class="flex flex-col md:flex-row gap-12 bg-gradient-to-r from-n3blue via-n3green to-n3green text-white px-8 py-12 -mt-2 mb-16 lg:px-32 lg:py-40 lg:mb-32">
-          <div class="basis-1/2">
+        <div className="flex flex-col md:flex-row gap-12 bg-gradient-to-r from-n3blue via-n3green to-n3green text-white px-8 py-12 -mt-2 mb-16 lg:px-32 lg:py-40 lg:mb-32">
+          <div className="basis-1/2">
             <p>
               We cannot entrust our currency, our education, our healthcare, our
               planet nor the future of our kids to these institutions anymore.
@@ -156,7 +156,7 @@ export default function Manifesto() {
               emerge from their ashes.
             </p>
           </div>
-          <div class="basis-1/2">
+          <div className="basis-1/2">
             <p>
               We are taught that nation states are ever-lasting institutions
               that are native to humankind itself. That they are too big to
@@ -242,14 +242,14 @@ export default function Manifesto() {
           collaborate on such jurisdictions, like Aragon.
         </p>
       </div>
-      <div class="bg-gradient-to-r from-n3blue via-n3green to-n3green px-8 py-4 my-8 md:px-16 md:py-24 md:my-16 -mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32 text-center">
+      <div className="bg-gradient-to-r from-n3blue via-n3green to-n3green px-8 py-4 my-8 md:px-16 md:py-24 md:my-16 -mx-4 md:-mx-6 lg:-mx-8 xl:-mx-32 text-center">
         <h1 className="text-1xl tracking-loose text-white sm:text-5xl md:text-5xl font-display md:leading-tight">
           Bitcoin → Ethereum → DAOs → Digital nations
         </h1>
       </div>
-      <div class="flex flex-col lg:flex-row my-8 md:my-24">
-        <div class="basis-1/3"></div>
-        <div class="basis-2/3 md:pr-16">
+      <div className="flex flex-col lg:flex-row my-8 md:my-24">
+        <div className="basis-1/3"></div>
+        <div className="basis-2/3 md:pr-16">
           <p className="text-2xl md:text-4xl">
             <span className="text-n3blue">Web3 is here</span>, and for the first
             time in history, the Internet will determine the structure of our
@@ -267,8 +267,8 @@ export default function Manifesto() {
           Web3 shifts the narrative from master-to-slave to peer-to-peer.
         </h1>
       </div>
-      <div class="flex flex-col md:flex-row gap-8">
-        <div class="basis-1/2">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="basis-1/2">
           <p>
             As value is moving to Web3 en masse, it moves further away from any
             centralized power held by nation states. While Web2 already gave
@@ -293,7 +293,7 @@ export default function Manifesto() {
             than 9-to-5 jobs.
           </p>
         </div>
-        <div class="basis-1/2">
+        <div className="basis-1/2">
           <p>
             Corporations are becoming fluid DAOs and not forever-lasting
             hierarchical institutions.
@@ -336,9 +336,9 @@ export default function Manifesto() {
           <h4 className="text-xl">Mesh of Crypto-powered Communities</h4>
         </div>
       </div>
-      <div class="flex flex-col lg:flex-row gap-8 my-8 md:my-24">
-        <div class="basis-1/3"></div>
-        <div class="basis-2/3 md:pr-16">
+      <div className="flex flex-col lg:flex-row gap-8 my-8 md:my-24">
+        <div className="basis-1/3"></div>
+        <div className="basis-2/3 md:pr-16">
           <p className="text-2xl md:text-4xl">
             With startups and Web3 networks un-bundling the nation state's
             services and making them 100x better, and these nations themselves
@@ -348,7 +348,7 @@ export default function Manifesto() {
           </p>
         </div>
       </div>
-      <div class="bg-gradient-to-r from-n3blue via-n3green to-n3green px-16 py-24 my-16 text-center">
+      <div className="bg-gradient-to-r from-n3blue via-n3green to-n3green px-16 py-24 my-16 text-center">
         <h2 className="text-2xl sm:text-3xl md:text-4xl tracking-loose text-white text-white mb-8">
           Share this manifesto with the world
         </h2>

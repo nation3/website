@@ -11,7 +11,7 @@ export default function Home() {
     <div>
       <Head title="" description="VC fund" image="" type="website" />
 
-      <div class="bg-[url('/home-bg.svg')] bg-no-repeat absolute inset-0 bg-[top_-7.5rem_right_-20rem] bg-[length:768px_768px] bottom-32 md:bg-[top_-7.5rem_right_-7.5rem] lg:bg-[length:768px_768px] xl:bg-auto xl:bottom-0"></div>
+      <div className="bg-[url('/home-bg.svg')] bg-no-repeat absolute inset-0 bg-[top_-7.5rem_right_-20rem] bg-[length:768px_768px] bottom-32 md:bg-[top_-7.5rem_right_-7.5rem] lg:bg-[length:768px_768px] xl:bg-auto xl:bottom-0"></div>
       <div className="relative flex flex-row items-center gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-32 lg:w-full xl:mb-32 xl:mb-60 z-1">
         <div className="text-left">
           <BigTitle text="Rebuilding nation states" gradientText="with Web3" />
