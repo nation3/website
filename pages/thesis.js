@@ -35,7 +35,10 @@ export default function Thesis() {
             Their ethos revolted around war, pride and sacrifice.
           </p>
           <div className="mt-5 sm:mt-8">
-            <Button text="Read the thesis" link="" />
+            <Button
+              text="Read the thesis"
+              link="https://www.dropbox.com/s/o4zf4c7oxk65ioc/Nation3%20thesis.pdf?dl=1"
+            />
           </div>
         </div>
       </div>
