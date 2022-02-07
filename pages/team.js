@@ -8,7 +8,12 @@ import AniPic from '../public/team/a.png'
 export default function Team() {
   return (
     <div>
-      <Head title="Team" description="VC fund" image="" type="website" />
+      <Head
+        title="Nation3 Team"
+        description="It's time to reinvent the nation state."
+        image=""
+        type="website"
+      />
       <BigTitle
         text="Nation3 team"
         gradientText="The humans behind the project"

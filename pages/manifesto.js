@@ -1,7 +1,6 @@
 import Head from '../components/Head'
 import BigTitle from '../components/BigTitle'
 import Quote from '../components/Quote'
-import Button from '../components/Button'
 import Image from 'next/image'
 import Manifesto1 from '../public/manifesto/1.svg'
 import Manifesto2 from '../public/manifesto/2.svg'
@@ -13,16 +12,19 @@ import Nation1Icon from '../public/icons/nation1.svg'
 import Nation2Icon from '../public/icons/nation2.svg'
 import Nation3Icon from '../public/icons/nation3.svg'
 import TwitterIcon from '../public/icons/twitter.svg'
-import EmailIcon from '../public/icons/email.svg'
-import RedditIcon from '../public/icons/reddit.svg'
 
 export default function Manifesto() {
   return (
     <div className="text-lg">
-      <Head title="Team" description="VC fund" image="" type="website" />
+      <Head
+        title="Nation3 Manifesto"
+        description="It's time to reinvent the nation state."
+        image=""
+        type="website"
+      />
       <BigTitle
-        text="Its time to re-invent the nation state."
-        gradientText="Towards a peaceful world of interconnected communities."
+        text="Nation3 thesis"
+        gradientText="It's time to re-invent the nation state"
       />
       <div className="my-16">
         <Image src={Manifesto1}></Image>
@@ -93,12 +95,12 @@ export default function Manifesto() {
               <p>
                 Fast-forward to today, our nation states are still based on the
                 very same pillars of war, pride and sacrifice as those in the
-                Dark Ages. Our science and technology has leaped forward so
-                much.
+                Dark Ages.
                 <br></br>
                 <br></br>
-                We no longer pray to Gods for harvest, and we are now on our way
-                to becoming multi-planetary. Yet, for close to a thousand years,
+                Our science and technology has leaped forward so much. We no
+                longer pray to Gods for harvest, and we are now on our way to
+                becoming multi-planetary. Yet, for close to a thousand years,
                 the monolithic structure of nation states remains unchanged.
               </p>
             </div>
@@ -111,9 +113,9 @@ export default function Manifesto() {
           robots that memorize well but don't ask the why nor the what if.
         </h1>
         <h1 className="text-2xl tracking-loose text-gray-900 sm:text-4xl md:text-5xl md:leading-tight">
-          These don’t know of creativity nor basic concepts like what inflation
-          is — creating unparalleled unemployment across regions like Southern
-          Europe.
+          Many today don’t know of creativity nor basic concepts like what
+          inflation is — creating unparalleled unemployment across regions like
+          Southern Europe.
         </h1>
       </div>
       <div className="flex flex-col md:flex-row gap-8 mb-8 md:mb-16">
@@ -264,7 +266,7 @@ export default function Manifesto() {
           Web3 is much more than a new Internet.
         </h1>
         <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-loose  bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text mt-1 md:leading-tight">
-          Web3 shifts the narrative from master-to-slave to peer-to-peer.
+          Web3 shifts the narrative from master-slave to peer-to-peer.
         </h1>
       </div>
       <div className="flex flex-col md:flex-row gap-8">
@@ -327,12 +329,12 @@ export default function Manifesto() {
         </div>
         <div className="bg-zinc-50 p-8">
           <Image src={Nation2Icon} width={74} height={74}></Image>
-          <h4 className="text-lg text-gray-400 mt-16">Nation1</h4>
+          <h4 className="text-lg text-gray-400 mt-16">Nation2</h4>
           <h4 className="text-xl">Monolithic Democracy</h4>
         </div>
         <div className="bg-gradient-to-r from-n3blue/10 via-n3green/10 to-n3green/10 p-8">
           <Image src={Nation3Icon} width={74} height={74}></Image>
-          <h4 className="text-lg text-gray-400 mt-16">Nation1</h4>
+          <h4 className="text-lg text-gray-400 mt-16">Nation3</h4>
           <h4 className="text-xl">Mesh of Crypto-powered Communities</h4>
         </div>
       </div>
@@ -353,9 +355,15 @@ export default function Manifesto() {
           Share this manifesto with the world
         </h2>
         <div className="flex gap-4 justify-center">
-          <Image src={TwitterIcon} width={56} height={56} />
-          <Image src={EmailIcon} width={56} height={56} />
-          <Image src={RedditIcon} width={56} height={56} />
+          <a
+            href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+              'I support the @Nation3VC manifesto to re-invent nation states and build digital nations https://nation3.com/manifesto'
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image src={TwitterIcon} width={56} height={56} />
+          </a>
         </div>
       </div>
     </div>

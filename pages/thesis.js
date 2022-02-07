@@ -7,7 +7,12 @@ import ThesisArt from '../public/thesis-art.svg'
 export default function Thesis() {
   return (
     <div>
-      <Head title="Team" description="VC fund" image="" type="website" />
+      <Head
+        title="Nation3 Manifesto"
+        description="It's time to reinvent the nation state."
+        image=""
+        type="website"
+      />
       <BigTitle text="Nation3 thesis" gradientText="Unbundling nation states" />
       <div className="mx-auto flex flex-col md:flex-row items-center gap-8 mt-16">
         <div className="basis-1/3">
@@ -24,7 +29,7 @@ export default function Thesis() {
           </p>
           <p className="mb-4">
             The threat of physical violence determined the purpose of those
-            early nations: Protecting their citizens.
+            early nations: protecting their citizens.
           </p>{' '}
           <p className="mb-4">
             Their ethos revolted around war, pride and sacrifice.
