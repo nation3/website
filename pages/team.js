@@ -9,7 +9,7 @@ export default function Team() {
   return (
     <div>
       <Head
-        title="Nation3 Team"
+        title="Team"
         description="It's time to reinvent the nation state."
         image=""
         type="website"

@@ -8,7 +8,7 @@ export default function Thesis() {
   return (
     <div>
       <Head
-        title="Nation3 Manifesto"
+        title="Manifesto"
         description="It's time to reinvent the nation state."
         image=""
         type="website"

@@ -17,7 +17,7 @@ export default function Manifesto() {
   return (
     <div className="text-lg">
       <Head
-        title="Nation3 Manifesto"
+        title="Manifesto"
         description="It's time to reinvent the nation state."
         image=""
         type="website"

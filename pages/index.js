@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div>
       <Head
-        title="Nation3"
+        title=""
         description="It's time to reinvent the nation state."
         image=""
         type="website"
