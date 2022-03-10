@@ -21,6 +21,11 @@ export default function Home() {
       <div className="relative flex flex-row items-center gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-32 lg:w-full xl:mb-32 xl:mb-60 z-1">
         <div className="text-left">
           <BigTitle text="Rebuilding nation states" gradientText="with Web3" />
+          <p className="my-4 max-w-lg">
+            The Nation3 DAO gathers those dreaming about cloud nations and
+            crypto cities, documents the required technology for such vision,
+            and aims to fund it.
+          </p>
           <div className="mt-5 sm:mt-4">
             <GradientLink href="/manifesto" text="Read the manifesto" />
           </div>
@@ -29,42 +34,23 @@ export default function Home() {
       <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 pt-8 relative bg-white z-1">
         <div>
           <Image src={ThesisIcon} width={42} height={42} />
-          <h2 className="text-2xl leading-loose">Thesis</h2>
+          <h2 className="text-2xl leading-loose">$NATION</h2>
           <p className="mb-4">
-            For the first time Web3 gives us the opportunity to un-bundle the
-            services that nation states provide, make them 100x better and
-            ensure they are community-owned. The result will be a new, open
-            source stack for running Web3-powered nation states: the Nation3
-            stack.
+            $NATION holders are Nation3's citizens. It allows its holders to
+            govern the Nation3 DAO. $NATION can also be used to obtain NFT
+            passports and membership into gated Discord channels.
           </p>
-          <GradientLink href="/thesis" text="Thesis" />
+          <GradientLink href="/thesis" text="Become a citizen" />
         </div>
         <div>
           <Image src={RfsIcon} width={42} height={42} />
-          <h2 className="text-2xl leading-loose">Request for startups</h2>
+          <h2 className="text-2xl leading-loose">DAO</h2>
           <p className="mb-4">
-            We have compiled a tech tree of what needs to be built to unlock the
-            nations and cities of the future. If you are building one of those
-            key components, please reach out, we would love to know more!
+            The Nation3 DAO aims to gather together the builders, creators and
+            artists that are reimagining nation states. Rebuilding society's
+            fabric isn't easy, but you can be part of the journey today.
           </p>
-          <GradientLink href="/thesis" text="Tech tree" />
-        </div>
-        <div>
-          <Image src={TeamIcon} width={42} height={42} />
-          <h2 className="text-2xl leading-loose">Team</h2>
-          <p className="mb-4">
-            We combine VC and founder experience in Web3 and DAOs, and know what
-            it's like to build at the dawn of a new movement. But most
-            importantly, we are loyal — empathy with founders is truly in our
-            heart.
-            <br></br>
-            <br></br>
-            Are you one of the hopeful, bold and visionary souls building a
-            better world for humankind? Then we commit to sticking by your side
-            as you crack on — while also jumping into brand-building, design and
-            technical discussions when you need us.
-          </p>
-          <GradientLink href="/team" text="Team" />
+          <GradientLink href="/thesis" text="Join Discord" />
         </div>
       </div>
     </div>

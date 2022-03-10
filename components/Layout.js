@@ -7,9 +7,9 @@ import Logo from '../public/logo.svg'
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
-  { name: 'Thesis', href: '/thesis' },
-  { name: 'Team', href: '/team' },
-  { name: 'Writings', href: '#' },
+  { name: 'Wiki', href: 'https://wiki.nation3.org' },
+  { name: 'Discord', href: '#' },
+  { name: 'DAO', href: '#' },
 ]
 
 export default function Layout({ children }) {
@@ -22,7 +22,8 @@ export default function Layout({ children }) {
               <div className="flex items-center justify-between w-full md:w-auto cursor-pointer">
                 <Link href="/">
                   <Image src={Logo} width={128} height={50} />
-                </Link>
+                </Link>{' '}
+                DAO
                 <div className="mr-2 flex items-center md:hidden">
                   <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
                     <span className="sr-only">Open main menu</span>
@@ -89,13 +90,13 @@ export default function Layout({ children }) {
       </Popover>
       {children}
       <footer className="mt-32 flex justify-between">
-        <p>Nation3 2022</p>
+        <p>🌍</p>
         <a
           className="flex align-center gap-2"
-          href="https://twitter.com/Nation3VC"
+          href="https://twitter.com/Nation3DAO"
         >
           <p className="bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text">
-            @Nation3VC
+            @Nation3DAO
           </p>
         </a>
       </footer>
