@@ -9,11 +9,11 @@ import Card from 'react-animated-3d-card-shadow'
 import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [width, setWidth] = useState()
-  const breakpoint = 620
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
     window.addEventListener('resize', () => setWidth(window.innerWidth))
+    setWidth(window.innerWidth)
   }, [])
   return (
     <div>
@@ -39,8 +39,8 @@ export default function Home() {
           <Card
             style={{
               backgroundColor: 'transparent',
-              width: width > 1025 ? '450px' : '300px',
-              height: width > 1025 ? '300px' : '200px',
+              width: width > 1024 ? '450px' : '300px',
+              height: width > 1024 ? '300px' : '200px',
               cursor: 'pointer',
             }}
           >
