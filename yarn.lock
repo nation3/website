@@ -2578,6 +2578,16 @@ raw-body@2.4.1:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+react-animated-3d-card-shadow@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-animated-3d-card-shadow/-/react-animated-3d-card-shadow-1.0.1.tgz#61234bd0b0de56f47ba5345fca9b8bc66d926ed5"
+  integrity sha512-9Kfw8puN34/OMcHMtxtYIZZzFApQPH5Xiq1av1xsmgrnYzHtpLFFTz18xWGnnZkMhKrYEb/p3iOVTvYYidpFpA==
+
+react-animated-3d-card@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-animated-3d-card/-/react-animated-3d-card-1.0.2.tgz#65bcc02f3b9aeafa3f7187fa7d7e4f4d7bf8a20b"
+  integrity sha512-Gx3eo3EEk6/2h8fjZ/kYv5YWiZzEUdUBi9Vw6zvvj2HvuFw1SR3h/Y0Z7T99jS5CHupI8eqWqyQ81oUu4IN4fw==
+
 react-dom@17.0.2:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.2.tgz#ecffb6845e3ad8dbfcdc498f0d0a939736502c23"
