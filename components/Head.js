@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 export default function WebsiteHead({ title, description, image, type }) {
-  const baseUrl = 'https://nation3.com'
+  const baseUrl = 'https://nation3.org'
   const titlePrefix = 'Nation3'
   return (
     <Head>
