@@ -19,8 +19,8 @@ export default function Home() {
     <div>
       <Head
         title=""
-        description="It's time to reinvent the nation state."
-        image=""
+        description="Sovereign cloud nation. Building a community of like-minded people creating a nation on the cloud."
+        image="/social/home.png"
         type="website"
       />
 

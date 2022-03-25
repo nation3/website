@@ -19,7 +19,7 @@ export default function Manifesto() {
       <Head
         title="Manifesto"
         description="It's time to reinvent the nation state."
-        image=""
+        image="/social/manifesto.png"
         type="website"
       />
       <BigTitle
