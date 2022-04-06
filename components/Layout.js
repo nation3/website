@@ -6,13 +6,7 @@ import Image from 'next/image'
 import Logo from '../public/logo.svg'
 import GradientLink from './GradientLink'
 
-const navigation = [
-  { name: 'Manifesto', href: '/manifesto' },
-  { name: 'Wiki', href: 'https://wiki.nation3.org' },
-  { name: 'Discord', href: '#' },
-  { name: 'Governance', href: 'https://snapshot.org/#/nation3.eth' },
-  { name: 'DAO', href: 'https://client.aragon.org/#/nation3' },
-]
+const navigation = []
 
 export default function Layout({ children }) {
   return (
