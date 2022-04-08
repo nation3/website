@@ -348,7 +348,7 @@ export default function Manifesto() {
         <div className="flex gap-4 justify-center">
           <a
             href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
-              'I support the @Nation3VC manifesto to re-invent nation states and build digital nations https://nation3.com/manifesto'
+              'I support the @Nation3DAO manifesto to re-invent nation states and build digital nations https://nation3.org/manifesto'
             )}`}
             target="_blank"
             rel="noopener noreferrer"
