@@ -186,7 +186,7 @@ export default function Manifesto() {
           kids can run free again.
           <br></br>
           <br></br>
-          We need <span className="text-n3blue">new ducation</span> to unleash
+          We need <span className="text-n3blue">new education</span> to unleash
           our creativity.
           <br></br>
           <br></br>
