@@ -25,7 +25,7 @@ export default function Manifesto() {
         type="website"
       />
       <BigTitle
-        text="Nation3 thesis"
+        text="Nation3 manifesto"
         gradientText="It's time to re-invent the nation state"
       />
       <div className="my-16">
