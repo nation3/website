@@ -79,18 +79,13 @@ export default function Layout({ children }) {
         </Transition>
       </Popover>
       {children}
-      <footer className="mt-32 flex justify-between">
-        <p>☁️🇺🇳</p>
-        <a
-          className="flex align-center gap-2"
-          href="https://twitter.com/Nation3DAO"
-        >
-          <GradientLink
-            href="https://twitter.com/nation3dao"
-            text="@Nation3DAO"
-            hideArrow={true}
-          />
-        </a>
+      <footer className="mt-8 md:mt-32 flex justify-between font-light">
+        <p>☁️ 🇺🇳</p>
+        <GradientLink
+          href="https://twitter.com/nation3dao"
+          text="@Nation3DAO"
+          hideArrow={true}
+        />
       </footer>
     </div>
   )

@@ -6,12 +6,13 @@ module.exports = {
   theme: {
     fontFamily: {
       display: ['Bossa', 'sans-serif'],
-      body: ['UniversalSans', 'sans-serif'],
+      body: ['Inter', 'sans-serif'],
     },
     extend: {
       colors: {
         n3blue: '#69C9FF',
         n3green: '#88F1BB',
+        n3navyblue: '#224059',
       },
     },
   },
