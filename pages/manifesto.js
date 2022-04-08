@@ -62,9 +62,9 @@ export default function Manifesto() {
         <p className="mt-8">
           A statue was erected in 2017 in Crimea with the quote above.
           <br></br>
-          <div className="font-medium">
+          <span className="font-medium">
             How much have we evolved in 700 years?
-          </div>
+          </span>
         </p>
       </div>
       <div className="max-w-4xl m-auto pl-6">
@@ -335,7 +335,7 @@ export default function Manifesto() {
         </div>
       </div>
       <div className="max-w-5xl m-auto my-8 md:my-24">
-        <p className="text-2xl md:text-5xl font-light md:-mx-1">
+        <div className="text-2xl md:text-5xl font-light md:-mx-1">
           With startups and Web3 networks un-bundling the nation state's
           services and making them 100x better, and these nations themselves
           competing against each other, we will enter a new era of prosperity
@@ -343,7 +343,7 @@ export default function Manifesto() {
           <div className="text-n3blue font-medium mt-4">
             It's time for Nation3.
           </div>
-        </p>
+        </div>
       </div>
       <div className="bg-gradient-to-r from-n3blue via-n3green to-n3green px-8 py-4 my-8 md:px-16 md:py-24 md:my-16 -mx-4 md:mx-0">
         <h2 className="sm:text-3xl md:text-4xl tracking-loose text-white text-center mb-8">
