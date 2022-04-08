@@ -4,16 +4,12 @@ import Quote from '../components/Quote'
 import Image from 'next/image'
 import Manifesto1 from '../public/manifesto/1.svg'
 import Manifesto2 from '../public/manifesto/2.svg'
-import Manifesto3 from '../public/manifesto/3.svg'
-import Manifesto4 from '../public/manifesto/4.svg'
 import Manifesto5 from '../public/manifesto/5.svg'
 import Manifesto6 from '../public/manifesto/6.svg'
-import Manifesto7 from '../public/manifesto/7.svg'
 import Nation1Icon from '../public/icons/nation1.svg'
 import Nation2Icon from '../public/icons/nation2.svg'
 import Nation3Icon from '../public/icons/nation3.svg'
 import TwitterIcon from '../public/icons/twitter.svg'
-import { urlObjectKeys } from 'next/dist/shared/lib/utils'
 
 export default function Manifesto() {
   return (
