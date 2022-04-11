@@ -42,7 +42,7 @@ export default function Manifesto() {
           those early nations: Protecting their citizens.
           <br></br>
           <br></br>
-          Their ethos revolted around{' '}
+          Their ethos revolved around{' '}
           <span className="font-medium">war, pride and sacrifice</span>.
         </p>
         <div className="border-y border-n3green px-0 md:px-16 py-6">
