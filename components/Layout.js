@@ -1,20 +1,20 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import Link from "next/link";
-import Image from "next/image";
-import Logo from "../public/logo.svg";
-import GradientLink from "./GradientLink";
-import Script from "next/script";
-import Announcement from "./Announcement";
+import { Fragment } from 'react'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
+import Image from 'next/image'
+import Logo from '../public/logo.svg'
+import GradientLink from './GradientLink'
+import Script from 'next/script'
+import Announcement from './Announcement'
 
 const navigation = [
-  { name: "Manifesto", href: "/manifesto" },
-  { name: "Wiki", href: "https://wiki.nation3.org" },
-  { name: "Discord", href: "https://discord.gg/rvrqvUWPDy" },
-  { name: "Governance", href: "https://snapshot.org/#/nation3.eth" },
-  { name: "DAO", href: "https://client.aragon.org/#/nation3" },
-];
+  { name: 'Manifesto', href: '/manifesto' },
+  { name: 'Wiki', href: 'https://wiki.nation3.org' },
+  { name: 'Discord', href: 'https://discord.gg/rvrqvUWPDy' },
+  { name: 'Governance', href: 'https://snapshot.org/#/nation3.eth' },
+  { name: 'DAO', href: 'https://client.aragon.org/#/nation3' },
+]
 
 export default function Layout({ children }) {
   return (
@@ -102,5 +102,5 @@ export default function Layout({ children }) {
       </footer>
       <Announcement />
     </div>
-  );
+  )
 }

@@ -1,20 +1,20 @@
-import Image from "next/image";
-import Head from "../components/Head";
-import BigTitle from "../components/BigTitle";
-import GradientLink from "../components/GradientLink";
-import ThesisIcon from "../public/icons/thesis.svg";
-import RfsIcon from "../public/icons/rfs.svg";
-import Flag from "../public/flag.svg";
-import Card from "react-animated-3d-card-shadow";
-import { useEffect, useState } from "react";
+import Image from 'next/image'
+import Head from '../components/Head'
+import BigTitle from '../components/BigTitle'
+import GradientLink from '../components/GradientLink'
+import ThesisIcon from '../public/icons/thesis.svg'
+import RfsIcon from '../public/icons/rfs.svg'
+import Flag from '../public/flag.svg'
+import Card from 'react-animated-3d-card-shadow'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
-  const [width, setWidth] = useState(0);
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
-    window.addEventListener("resize", () => setWidth(window.innerWidth));
-    setWidth(window.innerWidth);
-  }, []);
+    window.addEventListener('resize', () => setWidth(window.innerWidth))
+    setWidth(window.innerWidth)
+  }, [])
   return (
     <div>
       <Head
@@ -38,10 +38,10 @@ export default function Home() {
         <div className="basis-2/5 hidden md:block">
           <Card
             style={{
-              backgroundColor: "transparent",
-              width: width > 1024 ? "450px" : "300px",
-              height: width > 1024 ? "300px" : "200px",
-              cursor: "pointer",
+              backgroundColor: 'transparent',
+              width: width > 1024 ? '450px' : '300px',
+              height: width > 1024 ? '300px' : '200px',
+              cursor: 'pointer',
             }}
           >
             <Image src={Flag} />
@@ -53,8 +53,8 @@ export default function Home() {
           <Image src={ThesisIcon} width={42} height={42} />
           <h2 className="text-2xl leading-loose">Become a citizen</h2>
           <p className="mb-4">
-            You need to lock 10 $NATION tokens for a year to obtain an NFT
-            passport. Such passport will give you governance rights in the
+            Time-lock $NATION tokens to get $veNATION, then claim your NFT
+            passport. NFT passports give citizens governance rights in the
             Nation3 DAO and membership into gated Discord channels.
           </p>
           <GradientLink
@@ -77,5 +77,5 @@ export default function Home() {
         </div>
       </div>
     </div>
-  );
+  )
 }
