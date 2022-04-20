@@ -1,13 +1,20 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import Link from 'next/link'
-import Image from 'next/image'
-import Logo from '../public/logo.svg'
-import GradientLink from './GradientLink'
-import Script from 'next/script'
+import { Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "../public/logo.svg";
+import GradientLink from "./GradientLink";
+import Script from "next/script";
+import Announcement from "./Announcement";
 
-const navigation = []
+const navigation = [
+  { name: "Manifesto", href: "/manifesto" },
+  { name: "Wiki", href: "https://wiki.nation3.org" },
+  { name: "Discord", href: "https://discord.gg/rvrqvUWPDy" },
+  { name: "Governance", href: "https://snapshot.org/#/nation3.eth" },
+  { name: "DAO", href: "https://client.aragon.org/#/nation3" },
+];
 
 export default function Layout({ children }) {
   return (
@@ -18,16 +25,18 @@ export default function Layout({ children }) {
           <nav className="relative flex items-center justify-between sm:h-10">
             <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
               <div className="flex items-center justify-between w-full md:w-auto cursor-pointer">
-                <Link href="/manifesto">
+                <Link href="/">
                   <a>
                     <Image src={Logo} width={128} height={50} />
                   </a>
                 </Link>
                 <div className="mr-2 flex items-center md:hidden">
-                  {/*<Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
-                    <span className="sr-only">Open main menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>*/}
+                  {
+                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
+                      <span className="sr-only">Open main menu</span>
+                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                    </Popover.Button>
+                  }
                 </div>
               </div>
             </div>
@@ -91,6 +100,7 @@ export default function Layout({ children }) {
           hideArrow={true}
         />
       </footer>
+      <Announcement />
     </div>
-  )
+  );
 }
