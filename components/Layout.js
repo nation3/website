@@ -10,10 +10,10 @@ import Announcement from './Announcement'
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
+  { name: 'Citizen app', href: 'https://app.nation3.org' },
   { name: 'Wiki', href: 'https://wiki.nation3.org' },
   { name: 'Discord', href: 'https://discord.gg/rvrqvUWPDy' },
   { name: 'Governance', href: 'https://snapshot.org/#/nation3.eth' },
-  { name: 'DAO', href: 'https://client.aragon.org/#/nation3' },
 ]
 
 export default function Layout({ children }) {
