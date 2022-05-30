@@ -58,8 +58,8 @@ export default function Home() {
             Nation3 DAO and membership into gated Discord channels.
           </p>
           <GradientLink
-            href="https://app.nation3.org/lock"
-            text="Get $veNATION"
+            href="https://app.nation3.org/join"
+            text="Become a citizen"
           />
         </div>
         <div>

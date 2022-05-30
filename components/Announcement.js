@@ -10,12 +10,12 @@ export default function Announcement() {
   }
   useEffect(() => {
     window.addEventListener('resize', handleWindowSizeChange)
-    setClosed(localStorage.getItem('announcement-closed'))
+    setClosed(localStorage.getItem('announcement-closed-1'))
     setWidth(window.innerWidth)
   }, [])
 
   const close = () => {
-    localStorage.setItem('announcement-closed', 'true')
+    localStorage.setItem('announcement-closed-1', 'true')
     setClosed(true)
   }
 
@@ -26,12 +26,12 @@ export default function Announcement() {
           <p className="leading-loose align-middle ml-8">
             Read the latest announcement: {width <= 640 && <br />}
             <a
-              href="https://mirror.xyz/3.nation3.eth/ldUGMXZ-yDCXsvaZnQIGqK2zFRR7AmjRmgv2ZmDFNbo"
+              href="https://mirror.xyz/3.nation3.eth/zB-c7hjOVzKpBQCh0iq_QVQlGgGv617NwyEFOQs5i8g"
               rel="noopener noreferrer"
               target="_blank"
               className="text-n3blue hover:opacity-70 transition-opacity"
             >
-              We are $NATION
+              Genesis Passports launched
               <ExternalLinkIcon className="w-4 h-4 inline-block ml-1 mb-1 text-gray-500" />
             </a>
           </p>
