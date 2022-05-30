@@ -22,7 +22,7 @@ export default function Announcement() {
   return (
     <>
       {!closed && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white drop-shadow rounded-3xl w-full max-w-lg mx-auto h-24 sm:h-16 py-4 align-middle">
+        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-white drop-shadow rounded-3xl w-full max-w-xl mx-auto h-24 sm:h-16 py-4 align-middle">
           <p className="leading-loose align-middle ml-8">
             Read the latest announcement: {width <= 640 && <br />}
             <a
