@@ -13,7 +13,7 @@ const navigation = [
   { name: 'Citizen app', href: 'https://app.nation3.org' },
   { name: 'Wiki', href: 'https://wiki.nation3.org' },
   { name: 'Discord', href: 'https://discord.gg/nation3' },
-  { name: 'Governance', href: 'https://snapshot.org/#/nation3.eth' },
+  { name: 'Governance', href: 'https://vote.nation3.org' },
 ]
 
 export default function Layout({ children }) {
