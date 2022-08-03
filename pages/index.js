@@ -8,11 +8,12 @@ import Flag from '../public/flag.svg'
 import HalfOrb from '../public/half-orb.svg'
 import SolarpunkOrb from '../public/solarpunk-orb.png'
 import Manifesto5 from '../public/manifesto/5.svg'
+import TechTree from '../public/tech-tree.png'
 import Icon from '../public/icon.svg'
 import Card from 'react-animated-3d-card-shadow'
 import Avatars from '../components/Avatars'
 import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
-import { Timeline, Button, Card as FlowbiteCard } from 'flowbite-react'
+import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 
 const timelineItems = [
@@ -108,12 +109,12 @@ export default function Home() {
         type="website"
       />
 
-      <div className="relative flex flex-row items-center gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 z-1">
+      <div className="relative flex flex-row gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 z-1">
         <div className="text-left md:basis-3/5">
           <BigTitle text="A new nation state" gradientText="on the cloud" />
-          <p className="my-4 max-w-lg">
-            Nation3 is a sovereign cloud nation. We are building a community of
-            like-minded people creating a nation on the cloud.
+          <p className="my-4 max-w-lg text-lg">
+            We are building a zero-tax, Web3-powered, solarpunk society.
+            Finally, a nation you want to be a part of.
           </p>
           <div className="mt-5 sm:mt-4">
             <GradientLink href="/manifesto" text="Read the manifesto" />
@@ -133,28 +134,48 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="relative flex flex-row justify-center gap-16 mb-8 flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800 backdrop-opacity-60 text-white bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: 'url(/photos/war.jpg)' }}
-      >
-        <div class="w-full h-full flex flex-col justify-center items-center backdrop-blur-sm py-32">
-          <div className="text-left md:text-center m-auto max-w-3xl">
-            <h2 className="font-display text-4xl">
-              We’ve been taught that nation states are ever-lasting institutions
-              that are native to humankind itself.
-            </h2>
-            <p className="my-4">
-              Yet the have failed us: destroying our planet, inflicting economic
-              and health crises through design flaws and incompetence, and
-              propagating industrial age education that proliferates all this.
-            </p>
-          </div>
+      <div className="flex flex-col lg:flex-row justify-center gap-16 mb-32 items-center">
+        <div className="text-left md:basis-3/5">
+          <h2 className="text-xl">
+            We have been taught that nation states are ever-lasting institutions
+            that are native to humankind itself.
+          </h2>
+          <br></br>
+          <h2 className="font-display text-4xl">
+            <span className="underline decoration-red-700">
+              Yet they have failed us.
+            </span>
+          </h2>
+        </div>
+        <div className="basis-2/5 md:block pt-8">
+          <Avatar.Group>
+            <Avatar
+              img="https://static.dw.com/image/19464620_401.jpg"
+              rounded={true}
+              stacked={true}
+              size="xl"
+            />
+            <Avatar
+              img="https://images.theconversation.com/files/454945/original/file-20220329-25-1hqdcz4.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
+              rounded={true}
+              stacked={true}
+              size="xl"
+            />
+            <Avatar
+              img="/photos/who.png"
+              rounded={true}
+              stacked={true}
+              size="xl"
+            />
+          </Avatar.Group>
         </div>
       </div>
 
-      <div className="relative flex flex-row items-center gap-16 mx-auto mt-10 sm:my-4 md:my-8 lg:my-16 xl:my-32 mb-16 lg:w-full">
-        <div className="text-left md:basis-3/5">
-          <BigTitle gradientText="We can do better" />
+      <div className="md:-mb-24 overflow-hidden py-8">
+        <div className="relative z-10">
+          <h1 className="max-w-2xl text-3xl tracking-loose sm:text-4xl md:text-5xl bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text font-display mt-1 md:leading-tight">
+            We can do <span className="border-b-4 border-n3green">better</span>.
+          </h1>
           <p className="my-4 max-w-lg">
             Nation3 is on a mission to rebuild nation states into zero-tax,
             Web3-powered, solarpunk societies.
@@ -163,12 +184,12 @@ export default function Home() {
             <GradientLink href="/manifesto" text="Read the manifesto" />
           </div>
         </div>
-        <div className="basis-2/5 hidden md:block">
-          <Image src={Manifesto5} />
+        <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48">
+          <Image src={Manifesto5}></Image>
         </div>
       </div>
 
-      <div className="max-w-5xl">
+      <div className="max-w-5xl mt-16 m-auto">
         <div className="w-full relative hidden lg:block">
           <div className="bg-gradient-to-b from-transparent via-white to-white absolute w-full h-full z-10"></div>
           <Image src={HalfOrb} layout="responsive" />
@@ -183,9 +204,9 @@ export default function Home() {
                   <Timeline.Title>{item.title}</Timeline.Title>
                   <Timeline.Body>
                     {item.content}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 align-middle">
+                    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 align-middle list-disc">
                       {item.subitems.map((item) => (
-                        <div>
+                        <li>
                           {item.title}
                           {item.link && (
                             <>
@@ -199,9 +220,9 @@ export default function Home() {
                               </a>
                             </>
                           )}
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </Timeline.Body>
                 </Timeline.Content>
               </Timeline.Item>
@@ -210,7 +231,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-8 mx-auto mt-10 sm:my-4 md:my-8 lg:my-16 xl:my-32 mb-16 lg:w-full">
+      <div className="relative flex flex-col gap-8 mx-auto sm:my-8 md:my-16 lg:my-32 xl:my-48 lg:w-full">
         <div className="text-left">
           <BigTitle
             text="Want to co-found a nation?"
@@ -227,57 +248,16 @@ export default function Home() {
         <Avatars></Avatars>
       </div>
 
-      <div className="relative flex flex-col gap-8 mx-auto mt-10 sm:my-4 md:my-8 lg:my-16 xl:my-32 mb-16 lg:w-full">
-        <div className="text-left">
-          <BigTitle
-            text="A flourishing nation starts"
-            gradientText="with a solid foundation"
-          />
-          <div className="my-4 max-w-2xl">
-            <p>
-              New nations need new governance structures. Nations aren't
-              corporations, but they also shouldn't be monolithic, bureaucratic
-              organizations in which citizens don't have any real ownership.
-              That's why Nation3 is structured as a 
-              <a href="https://aragon.org/dao">DAO</a>.
-            </p>
-            <br />
-            <p>
-              DAOs are Internet-native organizations that give ownership to its
-              constituents -- citizens. The Nation3 DAO is governed by citizens,
-              who can increase their weight in governance decisions by staking
-              more $NATION.
-            </p>
-            <br />
-            <p>
-              Citizens can put forward governance proposals to make Nation3 a
-              better place. Our core contributors have years of experience
-              helping DAOs, so they have carefully crafted our very own
-              governance process -- which makes it simple for citizens to engage
-              with the process, while minimizing bureaucracy and admin overhead.
-            </p>
-          </div>
-          <div className="mt-5 sm:mt-4">
-            <GradientLink
-              href="https://github.com/nation3/gov/blob/main/GOVERNANCE.md"
-              text="Read more"
-            />
-          </div>
+      <div className="relative flex flex-row gap-8 mx-auto sm:my-8 md:my-16 lg:my-32 xl:my-48 mb-16 lg:w-full justify-end">
+        <div className="md:basis-2/5">
+          <Image src={TechTree} />
         </div>
-      </div>
-
-      <div className="relative flex flex-row gap-8 mx-auto mt-10 sm:my-4 md:my-8 lg:my-16 xl:my-32 mb-16 lg:w-full text-right">
-        <div className="md:basis-2/5"></div>
-        <div className="text-right md:basis-3/5">
-          <BigTitle
-            text="Build towards starts"
-            gradientText="the Nation3 stack"
-          />
-          <div className="my-4 max-w-2xl">
+        <div className="text-right md:basis-3/5 flex flex-col items-end">
+          <BigTitle text="Build towards" gradientText="the Nation3 stack" />
+          <div className="my-4 max-w-xl">
             <p>
               Choose a piece of the nation3 infrastructure to focus on, submit a
               funding proposal, and help us build a better tomorrow.
-              <a href="https://aragon.org/dao">DAO</a>.
             </p>
           </div>
           <div className="mt-5 sm:mt-4">

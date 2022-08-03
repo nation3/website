@@ -10,7 +10,7 @@ export default function Avatars() {
       />
     </Tooltip>
   )
-  const avatars = Array(40).fill(avatar)
+  const avatars = Array(39).fill(avatar)
   return (
     <div className="flex flex-wrap gap-2">
       {avatars.map((avatar) => avatar)}
