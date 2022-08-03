@@ -13,7 +13,7 @@ import TwitterIcon from '../public/icons/twitter.svg'
 
 export default function Manifesto() {
   return (
-    <div className="text-lg">
+    <div className="text-lg mt-24">
       <Head
         title="Manifesto"
         description="It's time to reinvent the nation state."
@@ -168,7 +168,7 @@ export default function Manifesto() {
         We need to reimagine new nations and we need to{' '}
         <span className="border-b-4 border-n3green">build them</span>.
       </h1>
-      <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48">
+      <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48 overflow-hidden">
         <Image src={Manifesto5}></Image>
       </div>
 

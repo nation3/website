@@ -16,6 +16,21 @@ import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 
+const tradStateImages = [
+  {
+    src: 'https://static.dw.com/image/19464620_401.jpg',
+    link: 'https://climateactiontracker.org',
+  },
+  {
+    src: 'https://images.theconversation.com/files/454945/original/file-20220329-25-1hqdcz4.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+    link: 'https://liveuamap.com',
+  },
+  {
+    src: '/photos/who.png',
+    link: 'https://edition.cnn.com/2020/03/30/world/coronavirus-who-masks-recommendation-trnd/index.html',
+  },
+]
+
 const timelineItems = [
   {
     phase: 1,
@@ -113,11 +128,11 @@ export default function Home() {
         <div className="text-left md:basis-3/5">
           <BigTitle text="A new nation state" gradientText="on the cloud" />
           <p className="my-4 max-w-lg text-lg">
-            We are building a zero-tax, Web3-powered, solarpunk society.
-            Finally, a nation you want to be a part of.
+            We are building a zero-tax, Web3-powered, solarpunk society. One
+            that serves you, not the other way round.
           </p>
           <div className="mt-5 sm:mt-4">
-            <GradientLink href="/manifesto" text="Read the manifesto" />
+            <GradientLink href="/manifesto" text="Become a citizen" />
           </div>
         </div>
         <div className="basis-2/5 hidden md:block">
@@ -149,24 +164,21 @@ export default function Home() {
         </div>
         <div className="basis-2/5 md:block pt-8">
           <Avatar.Group>
-            <Avatar
-              img="https://static.dw.com/image/19464620_401.jpg"
-              rounded={true}
-              stacked={true}
-              size="xl"
-            />
-            <Avatar
-              img="https://images.theconversation.com/files/454945/original/file-20220329-25-1hqdcz4.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop"
-              rounded={true}
-              stacked={true}
-              size="xl"
-            />
-            <Avatar
-              img="/photos/who.png"
-              rounded={true}
-              stacked={true}
-              size="xl"
-            />
+            {tradStateImages.map((image) => (
+              <a
+                href={image.link}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:z-50 hover:scale-105 transition"
+              >
+                <Avatar
+                  img={image.src}
+                  rounded={true}
+                  stacked={true}
+                  size="xl"
+                />
+              </a>
+            ))}
           </Avatar.Group>
         </div>
       </div>
@@ -228,6 +240,9 @@ export default function Home() {
               </Timeline.Item>
             ))}
           </Timeline>
+          <div className="w-full flex flex-col items-center">
+            <Button color="primary">Check out the roadmap</Button>
+          </div>
         </div>
       </div>
 
@@ -260,10 +275,10 @@ export default function Home() {
               funding proposal, and help us build a better tomorrow.
             </p>
           </div>
-          <div className="mt-5 sm:mt-4">
+          <div>
             <GradientLink
               href="https://github.com/nation3/gov/blob/main/GOVERNANCE.md"
-              text="Read more"
+              text="Explore the tech tree"
             />
           </div>
         </div>
