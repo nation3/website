@@ -124,8 +124,8 @@ export default function Home() {
         type="website"
       />
 
-      <div className="relative flex flex-row gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 z-1">
-        <div className="text-left md:basis-3/5">
+      <div className="relative flex flex-row gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 items-center">
+        <div className="text-left md:basis-3/5 flex flex-col">
           <BigTitle text="A new nation state" gradientText="on the cloud" />
           <p className="my-4 max-w-lg text-lg">
             We are building a zero-tax, Web3-powered, solarpunk society. One
@@ -139,7 +139,7 @@ export default function Home() {
           <Card
             style={{
               backgroundColor: 'transparent',
-              width: width > 1024 ? '450px' : '300px',
+              width: width > 1024 ? '470px' : '300px',
               height: width > 1024 ? '300px' : '200px',
               cursor: 'pointer',
             }}
@@ -163,7 +163,7 @@ export default function Home() {
           </h2>
         </div>
         <div className="basis-2/5 md:block pt-8">
-          <Avatar.Group>
+          <div className="mb-5 flex -space-x-4 justify-end">
             {tradStateImages.map((image) => (
               <a
                 href={image.link}
@@ -179,7 +179,7 @@ export default function Home() {
                 />
               </a>
             ))}
-          </Avatar.Group>
+          </div>
         </div>
       </div>
 

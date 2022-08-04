@@ -20,18 +20,18 @@ const navigation = [
 export default function Layout({ children }) {
   return (
     <>
-      <div className="container h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+      <div className="container h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
         <Script src="https://cdn.splitbee.io/sb.js" />
         <div className="relative mb-4 z-10 -mx-4">
           <Navbar fluid={true} rounded={true}>
             <Navbar.Brand>
               <Link href="/">
-                <a className="flex flex-row gap-2">
+                <div className="flex flex-row gap-2 cursor-pointer hover:opacity-80 transition">
                   <Image src={Icon} width={50} height={50} />
                   <span className="self-center whitespace-nowrap text-lg font-light dark:text-white">
                     Nation3
                   </span>
-                </a>
+                </div>
               </Link>
             </Navbar.Brand>
             <div className="flex md:order-2">
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
             </div>
             <Navbar.Collapse>
               {navigation.map((item) => (
-                <Navbar.Link>
+                <Navbar.Link key={item.href}>
                   <Link key={item.name} href={item.href}>
                     <span className="cursor-pointer text-base">
                       {item.name}
@@ -54,7 +54,7 @@ export default function Layout({ children }) {
           </Navbar>
         </div>
         {children}
-        <footer className="px-2 sm:px-4 my-8 md:mt-32 flex justify-between font-light">
+        <footer className="py-8 md:mt-16 flex justify-between font-light">
           <p>☁️ 🇺🇳</p>
           <GradientLink
             href="https://twitter.com/nation3dao"
