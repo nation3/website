@@ -23,3 +23,11 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+  @apply text-white !important;
+}
+
+.swiper .swiper-pagination-progressbar-fill {
+  @apply bg-n3blue !important;
+}
