@@ -51,4 +51,4 @@ Glad you asked! As soon as ordinary passports are launched (currently only 420 G
 
 Nation3 has just ratified a new governance process that aims to remove the over-reliance on the abstract human language and instead **use data structures, type checking and smart contracts** to make governance simple, fast, and transparent. You can read more about the Nation3 governance process, the types and stages of proposals [here](https://github.com/nation3/gov/blob/main/GOVERNANCE.md).
 
-You can make a new proposal or find all existing proposals at [https://gov.nation3.org/proposals](https://gov.nation3.org/proposals).
+You can make a new proposal or find all existing proposals at our [governance portal](https://gov.nation3.org/).

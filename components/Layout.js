@@ -7,17 +7,20 @@ import Icon from '../public/icon.svg'
 import GradientLink from './GradientLink'
 import Script from 'next/script'
 import Announcement from './Announcement'
-
-import { Navbar, Button } from 'flowbite-react'
+import { Navbar, Button, Tooltip } from 'flowbite-react'
+import {
+  FaDiscord,
+  FaGithub,
+  FaDiscourse,
+  FaVoteYea,
+  FaBookOpen,
+} from 'react-icons/fa'
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
   { name: '$NATION', href: '/token' },
   { name: 'FAQ', href: '/faq' },
 ]
-
-// footer links
-// https://discord.gg/nation3, https://wiki.nation3.or, Governance portal, https://vote.nation3.org, Aragon DAO
 
 // main nav
 // manifesto, $nation, FAQ
@@ -49,7 +52,7 @@ export default function Layout({ children }) {
               {navigation.map((item) => (
                 <Navbar.Link key={item.href}>
                   <Link key={item.name} href={item.href}>
-                    <span className="cursor-pointer text-base">
+                    <span className="cursor-pointer text-base font-display">
                       {item.name}
                     </span>
                   </Link>
@@ -59,58 +62,30 @@ export default function Layout({ children }) {
           </Navbar>
         </div>
         {children}
-        <footer className="py-8 md:mt-16 flex justify-between font-light">
-          <p>☁️ 🇺🇳</p>
-          <GradientLink
-            href="https://twitter.com/nation3dao"
-            text="@Nation3DAO"
-            hideArrow={true}
-          />
-        </footer>
-        <footer>
+        <footer className="py-6 mt-16 flex justify-between">
           <div className="w-full">
-            <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
-              <div>
-                <Footer.Brand
-                  href="https://flowbite.com"
-                  src="https://flowbite.com/docs/images/logo.svg"
-                  alt="Flowbite Logo"
-                  name="Flowbite"
-                />
-              </div>
-              <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-                <div>
-                  <Footer.Title title="about" />
-                  <Footer.LinkGroup col={true}>
-                    <Footer.Link href="#">Flowbite</Footer.Link>
-                    <Footer.Link href="#">Tailwind CSS</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
-                <div>
-                  <Footer.Title title="Follow us" />
-                  <Footer.LinkGroup col={true}>
-                    <Footer.Link href="#">Github</Footer.Link>
-                    <Footer.Link href="#">Discord</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
-                <div>
-                  <Footer.Title title="Legal" />
-                  <Footer.LinkGroup col={true}>
-                    <Footer.Link href="#">Privacy Policy</Footer.Link>
-                    <Footer.Link href="#">Terms & Conditions</Footer.Link>
-                  </Footer.LinkGroup>
-                </div>
-              </div>
-            </div>
-            <Footer.Divider />
             <div className="w-full sm:flex sm:items-center sm:justify-between">
-              <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+              <div className="relative w-8 h-8">
+                <Image src="/icon-plain.svg" layout="fill" />
+              </div>
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                <Footer.Icon href="#" icon={MenuIcon} />
-                <Footer.Icon href="#" icon={MenuIcon} />
-                <Footer.Icon href="#" icon={MenuIcon} />
-                <Footer.Icon href="#" icon={MenuIcon} />
-                <Footer.Icon href="#" icon={MenuIcon} />
+                <Footer.Icon
+                  href="https://discord.gg/nation3"
+                  icon={FaDiscord}
+                />
+                <Footer.Icon
+                  href="https://forum.nation3.org"
+                  icon={FaDiscourse}
+                />
+                <Footer.Icon href="https://gov.nation3.org" icon={FaVoteYea} />
+                <Footer.Icon
+                  href="https://github.com/nation3"
+                  icon={FaGithub}
+                />
+                <Footer.Icon
+                  href="https://wiki.nation3.org"
+                  icon={FaBookOpen}
+                />
               </div>
             </div>
           </div>
@@ -120,3 +95,6 @@ export default function Layout({ children }) {
     </>
   )
 }
+
+// footer links
+// , , Governance portal, , Aragon DAO
