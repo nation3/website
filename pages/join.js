@@ -2,7 +2,7 @@ import SolarpunkOrb from '../public/join/solarpunk-orb.png'
 import Image from 'next/image'
 import { ChevronDoubleRightIcon } from '@heroicons/react/outline'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation } from 'swiper'
+import { Pagination, Navigation, Keyboard } from 'swiper'
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
 
@@ -11,7 +11,9 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-const components = { a: (props) => <a target="_blank" {...props}></a> }
+const components = {
+  a: (props) => <a target="_blank" rel="noreferrer" {...props}></a>,
+}
 
 const CarouselItem = ({ children, image }) => (
   <div className="flex h-full items-center px-16 gap-8">
@@ -28,24 +30,16 @@ export default function Join({ carouselItems }) {
   return (
     <div className="h-screen flex flex-col" id="carousel">
       <div className="my-8 h-full rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-80 bg-gradient-to-r from-n3blue to-n3green text-white overflow-hidden">
-        {/*<Carousel
-          indicators={false}
-          slide={false}
-          slideInterval={1000}
-          leftControl={<></>}
-          rightControl={
-            <span className="inline-flex items-center justify-center bg-white/30 group-hover:bg-white/50 group-focus:outline-none group-focus:ring-4 group-focus:ring-white dark:bg-gray-800/30 dark:group-hover:bg-gray-800/60 dark:group-focus:ring-gray-800/70 transition absolute top-0 right-0 bottom-0 w-16 sm:w-24">
-              <ChevronDoubleRightIcon className="h-6 w-6 text-white dark:text-gray-800 sm:h-12 sm:w-12" />
-            </span>
-          }
-        >*/}
         <Swiper
           pagination={{
             type: 'progressbar',
           }}
           navigation={true}
-          modules={[Pagination, Navigation]}
+          modules={[Pagination, Navigation, Keyboard]}
           className="h-full"
+          keyboard={{
+            enabled: true,
+          }}
         >
           {carouselItems.map((item, i) => (
             <SwiperSlide key={i}>
@@ -68,52 +62,50 @@ export async function getStaticProps({ params }) {
       text: `
       # 1.
       ## Become a contributor
-      You read the manifesto, it clicked.
+      You read [the manifesto](/manifesto), it clicked.
 
       You are fed up with the way traditional states run the show. You see your taxes go nowhere. Now what?
 
       Now you can contribute to building a Web3-powered,
-      tax-free, inclusive community, that will one day receive
-      international recognition and build solar punk cities you’ll
+      tax-free, inclusive community that aims to build [solarpunk](https://en.wikipedia.org/wiki/Solarpunk) cities you’ll
       want to live in.
       
-      - Head over to Discord and introduce yourself to the community
-      (majority of channels are token-gated, but you’ll learn how
-      to unlock them in next steps)
-      - Pick up open tasks on Dework and earn $NATION. Why would you want to have any?`,
+      - Head over to [Discord](https://discord.com/invite/nation3) and introduce yourself to the community. The majority of channels are token-gated, but you’ll learn how to unlock them next.
+      - Pick up [open tasks on Dework](https://app.dework.xyz/nation3) and earn $NATION.
+      Next, we'll dive in into $NATION.`,
       image: SolarpunkOrb,
     },
     {
       text: `
       # 2.
       ## Become a co-founder
-      Holding $NATION is like holding a co-founder stake in an emerging, rapidly growing tech country. It’s how nations should have always been: not parasitically taking a cut from everything you create, but sharing in the upside. 
+      Ever dreamed of co-founding a new nation? You can contribute to the
+      Nation3 economy, earn $NATION.
+      Holding $NATION is the community currency underpinning Nation3. It economically aligns the whole community towards achieving the Nation3 mission. like holding a co-founder stake in an emerging, rapidly growing tech country. It’s how nations should have always been: not parasitically taking a cut from everything you create, but sharing in the upside. 
 
-      - You can earn your $NATION by picking up open tasks on Dework, or [buy it here.](https://app.balancer.fi/#/trade/ether/0x333A4823466879eeF910A04D473505da62142069)
-      - You can earn rewards by providing liquidity to NATION / ETH pool.
-      - You can lock up your $NATION in exchange for $veNATION* - your skin-in-the-state - and for a limited time only get access to Discord channels with a balance above 0.1 $veNATION.
+      - You can earn your $NATION by picking up open tasks, or [buy it here](https://app.balancer.fi/#/trade/ether/0x333A4823466879eeF910A04D473505da62142069).
+      - You can earn rewards by providing liquidity to the [NATION/ETH pool](https://app.balancer.fi/#/pool/0x0bf37157d30dfe6f56757dcadff01aed83b08cd600020000000000000000019a).
+      - You can [lock up your $NATION in exchange for $veNATION](https://app.nation3.org/lock) — your skin-in-the-state — and for a limited time only get access to Discord channels with a balance above 0.1 $veNATION.
 
-      You’ll want to have more than 0.1 though. Wanna know why? —>`,
+      You’ll want to have more than 0.1 though. Next, we'll discover why.`,
       image: '/join/flag-shade.svg',
     },
     {
       text: `
       # 3.
       ## Become a Genesis Citizen
-      You can now become a Genesis Citizen and claim your passport out of only 420 to ever be minted.*
+      You can now become a Genesis Citizen and claim your passport out of only 420 Genesis Passports to ever be minted.
 
-Why would you want to be a Citizen? 
+      Why would you want to be a Citizen? 
 
-- Have a say in the direction we take as a nation
-- Participate in the internal economy, including paid work and the upcoming insurance circles
-- Access all Citizen-only spaces online and offline
-- Propose your own projects and get funding
-- Benefit from all Nation3 services being built now and in the future.
-- As a Genesis Citizen, get priority access to any physical locations in Nation3.
+      - Have a say in the direction we take as a nation.
+      - Participate in the internal economy, including paid work.
+      - Access all citizen-only spaces online and offline.
+      - Propose your own projects and get funding.
+      - Benefit from all Nation3 services being built now and in the future.
+      - As a Genesis Citizen, get priority access to any physical locations in Nation3.
 
-A minimum of 2 $veNATION is required to mint a passport. Whenever your lock expires, the underlying $NATION is yours to keep, sell, or re-lock.
-
-**of course, we’ll create lower passport types in the future to allow the community & economy to grow*`,
+      A minimum of 2 $veNATION is required to mint a passport. Whenever your lock expires, the underlying $NATION is yours to keep, sell, or re-lock.`,
       image: '/join/passport.svg',
     },
   ]

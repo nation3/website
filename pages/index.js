@@ -6,27 +6,30 @@ import ThesisIcon from '../public/icons/thesis.svg'
 import RfsIcon from '../public/icons/rfs.svg'
 import Flag from '../public/flag.svg'
 import HalfOrb from '../public/half-orb.svg'
-import SolarpunkOrb from '../public/solarpunk-orb.png'
 import Manifesto5 from '../public/manifesto/5.svg'
 import TechTree from '../public/tech-tree.png'
 import Icon from '../public/icon.svg'
 import Card from 'react-animated-3d-card-shadow'
 import Avatars from '../components/Avatars'
+import BurningPhoto from '../public/photos/burning.jpg'
+import PutinPhoto from '../public/photos/putin.jpg'
+import WHOPhoto from '../public/photos/who.png'
 import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
+import { fetchAvatars } from '../lib/avatars.js'
 
 const tradStateImages = [
   {
-    src: 'https://static.dw.com/image/19464620_401.jpg',
+    photo: BurningPhoto,
     link: 'https://climateactiontracker.org',
   },
   {
-    src: 'https://images.theconversation.com/files/454945/original/file-20220329-25-1hqdcz4.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop',
+    photo: PutinPhoto,
     link: 'https://liveuamap.com',
   },
   {
-    src: '/photos/who.png',
+    photo: WHOPhoto,
     link: 'https://edition.cnn.com/2020/03/30/world/coronavirus-who-masks-recommendation-trnd/index.html',
   },
 ]
@@ -46,11 +49,11 @@ const timelineItems = [
       },
       {
         title: 'Kickstart internal economy on Dework',
-        link: '',
+        link: 'https://app.dework.xyz/nation3',
       },
       {
         title:
-          'Optimise governance process to allow fast-moving, decentralised decisions',
+          'Optimize governance process to allow fast-moving, decentralised decisions',
         link: 'https://vote.nation3.org/#/proposal/0x6a8d5266c40d0be9a57ec52294db243e1a508e5be756227d3eb1659e9f64b609',
       },
       {
@@ -115,6 +118,7 @@ export default function Home() {
     window.addEventListener('resize', () => setWidth(window.innerWidth))
     setWidth(window.innerWidth)
   }, [])
+
   return (
     <div>
       <Head
@@ -164,15 +168,16 @@ export default function Home() {
         </div>
         <div className="basis-2/5 md:block pt-8">
           <div className="mb-5 flex -space-x-4 justify-end">
-            {tradStateImages.map((image) => (
+            {tradStateImages.map((image, i) => (
               <a
                 href={image.link}
                 target="_blank"
                 rel="noreferrer"
                 className="hover:z-50 hover:scale-105 transition"
+                key={i}
               >
                 <Avatar
-                  img={image.src}
+                  img={image.photo.src}
                   rounded={true}
                   stacked={true}
                   size="xl"
@@ -208,34 +213,31 @@ export default function Home() {
         </div>
         <div className="max-w-2xl m-auto rounded-lg pt-32 lg:-mt-96 relative z-20">
           <Timeline>
-            {timelineItems.map((item) => (
-              <Timeline.Item>
+            {timelineItems.map((item, i) => (
+              <Timeline.Item key={i}>
                 <Timeline.Point icon={CalendarIcon} />
                 <Timeline.Content>
                   <Timeline.Time>Phase {item.phase}</Timeline.Time>
                   <Timeline.Title>{item.title}</Timeline.Title>
-                  <Timeline.Body>
-                    {item.content}
-                    <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 align-middle list-disc">
-                      {item.subitems.map((item) => (
-                        <li>
-                          {item.title}
-                          {item.link && (
-                            <>
-                              .{' '}
-                              <a
-                                href={item.link}
-                                className="text-n3blue hover:opacity-70 transition-opacity"
-                              >
-                                Done
-                                <ExternalLinkIcon className="w-4 h-4 inline-block ml-1 mb-1 text-gray-500" />
-                              </a>
-                            </>
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                  </Timeline.Body>
+                  <ul className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 align-middle list-disc">
+                    {item.subitems.map((item, i) => (
+                      <li key={i}>
+                        {item.title}
+                        {item.link && (
+                          <>
+                            .{' '}
+                            <a
+                              href={item.link}
+                              className="text-n3blue hover:opacity-70 transition-opacity"
+                            >
+                              Done
+                              <ExternalLinkIcon className="w-4 h-4 inline-block ml-1 mb-1 text-gray-500" />
+                            </a>
+                          </>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
                 </Timeline.Content>
               </Timeline.Item>
             ))}
@@ -314,4 +316,12 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const avatars = await fetchAvatars()
+
+  return {
+    props: { avatars },
+  }
 }
