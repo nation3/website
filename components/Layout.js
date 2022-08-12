@@ -28,14 +28,14 @@ const navigation = [
 export default function Layout({ children }) {
   return (
     <>
-      <div className="container h-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+      <div className="container h-full max-w-screen-xl mx-auto px-6 lg:px-8 mt-4">
         <Script src="https://cdn.splitbee.io/sb.js" />
         <div className="relative mb-4 z-10 -mx-4">
           <Navbar fluid={true} rounded={true}>
             <Navbar.Brand>
               <Link href="/">
                 <div className="flex flex-row gap-2 cursor-pointer hover:opacity-80 transition">
-                  <Image src={Icon} width={50} height={50} />
+                  <Image src={Icon} width={50} height={50} alt="Nation3 logo" />
                   <span className="self-center whitespace-nowrap text-lg font-light dark:text-white">
                     Nation3
                   </span>
@@ -43,9 +43,11 @@ export default function Layout({ children }) {
               </Link>
             </Navbar.Brand>
             <div className="flex md:order-2">
-              <Link href="/join#carousel">
-                <Button color="primary">Become a citizen</Button>
-              </Link>
+              <div className="hidden md:block">
+                <Link href="/join#carousel">
+                  <Button color="primary">Become a citizen</Button>
+                </Link>
+              </div>
               <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
@@ -58,6 +60,11 @@ export default function Layout({ children }) {
                   </Link>
                 </Navbar.Link>
               ))}
+              <div className="md:hidden">
+                <Link href="/join#carousel">
+                  <Button color="primary">Become a citizen</Button>
+                </Link>
+              </div>
             </Navbar.Collapse>
           </Navbar>
         </div>
@@ -66,7 +73,7 @@ export default function Layout({ children }) {
           <div className="w-full">
             <div className="w-full sm:flex sm:items-center sm:justify-between">
               <div className="relative w-8 h-8">
-                <Image src="/icon-plain.svg" layout="fill" />
+                <Image src="/icon-plain.svg" layout="fill" alt="Nation3 icon" />
               </div>
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                 <Footer.Icon
