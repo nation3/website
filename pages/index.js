@@ -2,8 +2,6 @@ import Image from 'next/image'
 import Head from '../components/Head'
 import BigTitle from '../components/BigTitle'
 import GradientLink from '../components/GradientLink'
-import ThesisIcon from '../public/icons/thesis.svg'
-import RfsIcon from '../public/icons/rfs.svg'
 import Flag from '../public/flag.svg'
 import HalfOrb from '../public/half-orb.svg'
 import Manifesto5 from '../public/manifesto/5.svg'
@@ -126,7 +124,7 @@ export default function Home() {
         type="website"
       />
 
-      <div className="relative flex flex-row gap-16 mx-auto mt-10 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 items-center">
+      <div className="relative flex flex-row gap-16 mx-auto mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 items-center">
         <div className="text-left md:basis-3/5 flex flex-col">
           <BigTitle text="A new nation state" gradientText="on the cloud" />
           <p className="my-4 max-w-lg text-lg">
@@ -151,14 +149,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row justify-center gap-16 mb-32 items-center">
+      <div className="flex flex-col lg:flex-row justify-center md:gap-16 md:mb-32 items-center">
         <div className="text-left md:basis-3/5">
           <h2 className="text-xl">
             We have been taught that nation states are ever-lasting institutions
             that are native to humankind itself.
           </h2>
           <br></br>
-          <h2 className="font-display text-4xl">
+          <h2 className="font-display text-3xl md:text-4xl">
             <span className="underline decoration-red-700">
               Yet they have failed us.
             </span>
@@ -199,17 +197,17 @@ export default function Home() {
             <GradientLink href="/manifesto" text="Read the manifesto" />
           </div>
         </div>
-        <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48">
+        <div className="md:mt-16 md:mb-24 md:my-0 md:-mx-16 md:-mt-48">
           <Image src={Manifesto5}></Image>
         </div>
       </div>
 
-      <div className="max-w-5xl mt-16 m-auto">
+      <div className="max-w-5xl lg:mt-16 m-auto">
         <div className="w-full relative hidden lg:block">
           <div className="bg-gradient-to-b from-transparent via-white to-white absolute w-full h-full z-10"></div>
           <Image src={HalfOrb} layout="responsive" />
         </div>
-        <div className="max-w-2xl m-auto rounded-lg pt-32 lg:-mt-96 relative z-20">
+        <div className="max-w-2xl m-auto rounded-lg lg:pt-32 lg:-mt-96 relative z-20">
           <Timeline>
             {timelineItems.map((item, i) => (
               <Timeline.Item key={i}>
@@ -246,23 +244,24 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-8 mx-auto sm:my-8 md:my-16 lg:my-32 xl:my-48 lg:w-full">
+      <div className="relative flex flex-col gap-8 mx-auto my-16 lg:my-32 xl:my-48 lg:w-full">
         <div className="text-left">
           <BigTitle
             text="Want to co-found a nation?"
             gradientText="Join the movement"
           />
-          <p className="my-4 max-w-lg">
-            Nation3 is on a mission to rebuild nation states into zero-tax,
-            Web3-powered, solarpunk societies.
+          <p className="my-4 max-w-xl">
+            The Nation3 DAO aims to gather together the builders, creators and
+            artists that are reimagining nation states. We are sailing uncharted
+            waters, and you can be part of our exciting journey today.
           </p>
           <div className="mt-5 sm:mt-4">
-            <GradientLink href="/join" text="Join the movement" />
+            <GradientLink href="/join#carousel" text="Join the movement" />
           </div>
         </div>
       </div>
 
-      <div className="relative flex flex-row gap-8 mx-auto sm:my-8 md:my-16 lg:my-32 xl:my-48 mb-16 lg:w-full justify-end">
+      <div className="relative flex flex-col lg:flex-row gap-8 mx-auto my-16 lg:my-32 xl:my-48 mb-16 lg:w-full justify-end">
         <div className="md:basis-2/5">
           <Image src={TechTree} />
         </div>
@@ -280,35 +279,6 @@ export default function Home() {
               text="Explore the tech tree"
             />
           </div>
-        </div>
-      </div>
-
-      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 pt-8 relative bg-white z-1">
-        <div>
-          <Image src={ThesisIcon} width={42} height={42} />
-          <h2 className="text-2xl leading-loose">Become a citizen</h2>
-          <p className="mb-4">
-            Time-lock $NATION tokens to get $veNATION, then claim your NFT
-            passport. NFT passports give citizens governance rights in the
-            Nation3 DAO and membership into gated Discord channels.
-          </p>
-          <GradientLink
-            href="https://app.nation3.org/join"
-            text="Become a citizen"
-          />
-        </div>
-        <div>
-          <Image src={RfsIcon} width={42} height={42} />
-          <h2 className="text-2xl leading-loose">Help shape it</h2>
-          <p className="mb-4">
-            The Nation3 DAO aims to gather together the builders, creators and
-            artists that are reimagining nation states. We are sailing uncharted
-            waters, and you can be part of our exciting journey today.
-          </p>
-          <GradientLink
-            href="https://discord.gg/rvrqvUWPDy"
-            text="Join Discord"
-          />
         </div>
       </div>
     </div>

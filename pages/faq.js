@@ -1,5 +1,6 @@
 import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import Head from '../components/Head'
 import TextLink from '../components/TextLink'
 import FAQMarkdown from '../public/faq.md'
 
@@ -10,6 +11,13 @@ const components = {
 export default function FAQ({ serialized }) {
   return (
     <>
+      <Head
+        title="FAQ"
+        description="Frequently asked questions about Nation3, a sovereign nation on the cloud."
+        image="/social/home.png"
+        type="website"
+      />
+
       <h1 className="text-5xl font-medium bg-gradient-to-r from-n3blue to-n3green text-transparent bg-clip-text font-display my-16">
         Frequently asked questions
       </h1>
