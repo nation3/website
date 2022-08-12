@@ -10,14 +10,12 @@ import Manifesto5 from '../public/manifesto/5.svg'
 import TechTree from '../public/tech-tree.png'
 import Icon from '../public/icon.svg'
 import Card from 'react-animated-3d-card-shadow'
-import Avatars from '../components/Avatars'
 import BurningPhoto from '../public/photos/burning.jpg'
 import PutinPhoto from '../public/photos/putin.jpg'
 import WHOPhoto from '../public/photos/who.png'
 import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
-import { fetchAvatars } from '../lib/avatars.js'
 
 const tradStateImages = [
   {
@@ -262,7 +260,6 @@ export default function Home() {
             <GradientLink href="/join" text="Join the movement" />
           </div>
         </div>
-        <Avatars></Avatars>
       </div>
 
       <div className="relative flex flex-row gap-8 mx-auto sm:my-8 md:my-16 lg:my-32 xl:my-48 mb-16 lg:w-full justify-end">
@@ -316,12 +313,4 @@ export default function Home() {
       </div>
     </div>
   )
-}
-
-export async function getStaticProps(context) {
-  const avatars = await fetchAvatars()
-
-  return {
-    props: { avatars },
-  }
 }
