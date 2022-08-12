@@ -198,7 +198,7 @@ export default function Home() {
           </div>
         </div>
         <div className="md:mt-16 md:mb-24 md:my-0 md:-mx-16 md:-mt-48">
-          <Image src={Manifesto5}></Image>
+          <Image src={Manifesto5} alt="Solarpunk building"></Image>
         </div>
       </div>
 
@@ -263,7 +263,7 @@ export default function Home() {
 
       <div className="relative flex flex-col lg:flex-row gap-8 mx-auto my-16 lg:my-32 xl:my-48 mb-16 lg:w-full justify-end">
         <div className="md:basis-2/5">
-          <Image src={TechTree} />
+          <Image src={TechTree} alt="Nation3 tech tree" />
         </div>
         <div className="text-right md:basis-3/5 flex flex-col items-end">
           <BigTitle text="Build towards" gradientText="the Nation3 stack" />
