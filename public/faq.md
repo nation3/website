@@ -35,7 +35,7 @@ $NATION also serves as the entry point to the Nation3 ecosystem and is required 
 
 When you [lock your $NATION,](https://app.nation3.org/lock) you won’t be able to trade or access it until its expiration date, and in its place you are issued with $veNATION - the non-transferable, time-locked version of the token.
 
-It’s important to note that your $veNATION balance is a representation of your skin-in-the-game, and therefore is _dynamic:_ as time passes and the remainder of time lock decreases (hence, you have less commitment left in financial terms), your $veNATION balance decreases (and with it, your voting power). Your underlying $NATION, however, doesn’t disappear: it unlocks incrementally, and you can either keep, re-lock, or sell it as you please. To keep your passport, you need to make sure that your balance is **never** below 2 $veNATION (it’s a good idea to have some buffer to make sure you don’t lose your passport).
+It’s important to note that your $veNATION balance is a representation of your skin-in-the-game, and therefore is _dynamic:_ as time passes and the remainder of time lock decreases (hence, you have less commitment left in financial terms), your $veNATION balance decreases (and with it, your voting power). Your underlying $NATION, however, doesn’t disappear: it unlocks as its lock expires and you can either keep, re-lock, or sell it as you please. To keep your passport, you need to make sure that your balance is **never** below 2 $veNATION (it’s a good idea to have some buffer to make sure you don’t lose your passport).
 
 ## How many passports are currently available?
 

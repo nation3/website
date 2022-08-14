@@ -1,8 +1,24 @@
 import '../styles/globals.css'
 import Layout from '../components/Layout'
 import { Flowbite } from 'flowbite-react'
+import { useState, useEffect } from 'react'
 
 function Nation3Website({ Component, pageProps }) {
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    const query = window.matchMedia('(prefers-color-scheme: dark)')
+    query.addListener((q) => setDarkMode(q.matches))
+    query.matches !== darkMode && setDarkMode(query.matches)
+    if (darkMode || query.matches) {
+      localStorage.setItem('theme', 'dark')
+      document.documentElement.classList.add('dark')
+    } else {
+      localStorage.setItem('theme', 'light')
+      document.documentElement.classList.remove('dark')
+    }
+  }, [darkMode])
+
   return (
     <Flowbite
       theme={{
