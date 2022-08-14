@@ -20,6 +20,7 @@ const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
   { name: '$NATION', href: '/token' },
   { name: 'FAQ', href: '/faq' },
+  { name: 'Citizen app', href: 'https://app.nation3.org' },
 ]
 
 // main nav
@@ -33,7 +34,7 @@ export default function Layout({ children }) {
         <div className="relative mb-4 z-10 -mx-4">
           <Navbar fluid={true} rounded={true}>
             <Navbar.Brand>
-              <Link href="/">
+              <Link href="/" passHref>
                 <div className="flex flex-row gap-2 cursor-pointer hover:opacity-80 transition">
                   <Image src={Icon} width={50} height={50} alt="Nation3 logo" />
                   <span className="self-center whitespace-nowrap text-lg font-light dark:text-white">
@@ -44,7 +45,7 @@ export default function Layout({ children }) {
             </Navbar.Brand>
             <div className="flex md:order-2">
               <div className="hidden md:block">
-                <Link href="/join#carousel">
+                <Link href="/join#carousel" passHref>
                   <Button color="primary">Become a citizen</Button>
                 </Link>
               </div>
@@ -53,7 +54,7 @@ export default function Layout({ children }) {
             <Navbar.Collapse>
               {navigation.map((item) => (
                 <Navbar.Link key={item.href}>
-                  <Link key={item.name} href={item.href}>
+                  <Link key={item.name} href={item.href} passHref>
                     <span className="cursor-pointer text-base font-display">
                       {item.name}
                     </span>
@@ -61,7 +62,7 @@ export default function Layout({ children }) {
                 </Navbar.Link>
               ))}
               <div className="md:hidden">
-                <Link href="/join#carousel">
+                <Link href="/join#carousel" passHref>
                   <Button color="primary">Become a citizen</Button>
                 </Link>
               </div>
@@ -102,6 +103,3 @@ export default function Layout({ children }) {
     </>
   )
 }
-
-// footer links
-// , , Governance portal, , Aragon DAO

@@ -127,12 +127,12 @@ export default function Home() {
       <div className="relative flex flex-row gap-16 mx-auto mt-16 lg:mt-20 xl:mt-64 mb-16 lg:w-full md:mb-24 lg:mb-32 xl:mb-48 items-center">
         <div className="text-left md:basis-3/5 flex flex-col">
           <BigTitle text="A new nation state" gradientText="on the cloud" />
-          <p className="my-4 max-w-lg text-lg">
+          <p className="my-4 max-w-lg text-lg dark:text-white">
             We are building a zero-tax, Web3-powered, solarpunk society. One
             that serves you, not the other way round.
           </p>
           <div className="mt-5 sm:mt-4">
-            <GradientLink href="/manifesto" text="Become a citizen" />
+            <GradientLink href="/join#carousel" text="Become a citizen" />
           </div>
         </div>
         <div className="basis-2/5 hidden md:block">
@@ -151,12 +151,12 @@ export default function Home() {
 
       <div className="flex flex-col lg:flex-row justify-center md:gap-16 md:mb-32 items-center">
         <div className="text-left md:basis-3/5">
-          <h2 className="text-xl">
+          <h2 className="text-xl dark:text-white">
             We have been taught that nation states are ever-lasting institutions
             that are native to humankind itself.
           </h2>
           <br></br>
-          <h2 className="font-display text-3xl md:text-4xl">
+          <h2 className="font-display text-3xl md:text-4xl dark:text-white">
             <span className="underline decoration-red-700">
               Yet they have failed us.
             </span>
@@ -189,7 +189,7 @@ export default function Home() {
           <h1 className="max-w-2xl text-3xl tracking-loose sm:text-4xl md:text-5xl bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text font-display mt-1 md:leading-tight">
             We can do <span className="border-b-4 border-n3green">better</span>.
           </h1>
-          <p className="my-4 max-w-lg">
+          <p className="my-4 max-w-lg dark:text-white">
             Nation3 is on a mission to rebuild nation states into zero-tax,
             Web3-powered, solarpunk societies.
           </p>
@@ -204,7 +204,7 @@ export default function Home() {
 
       <div className="max-w-5xl lg:mt-16 m-auto">
         <div className="w-full relative hidden lg:block">
-          <div className="bg-gradient-to-b from-transparent via-white to-white absolute w-full h-full z-10"></div>
+          <div className="bg-gradient-to-b from-transparent via-white to-white dark:via-gray-800 dark:to-gray-800 absolute w-full h-full z-10"></div>
           <Image src={HalfOrb} layout="responsive" />
         </div>
         <div className="max-w-2xl m-auto rounded-lg lg:pt-32 lg:-mt-96 relative z-20">
@@ -250,7 +250,7 @@ export default function Home() {
             text="Want to co-found a nation?"
             gradientText="Join the movement"
           />
-          <p className="my-4 max-w-xl">
+          <p className="my-4 max-w-xl dark:text-white">
             The Nation3 DAO aims to gather together the builders, creators and
             artists that are reimagining nation states. We are sailing uncharted
             waters, and you can be part of our exciting journey today.
@@ -267,7 +267,7 @@ export default function Home() {
         </div>
         <div className="text-right md:basis-3/5 flex flex-col items-end">
           <BigTitle text="Build towards" gradientText="the Nation3 stack" />
-          <div className="my-4 max-w-xl">
+          <div className="my-4 max-w-xl dark:text-white">
             <p>
               Choose a piece of the nation3 infrastructure to focus on, submit a
               funding proposal, and help us build a better tomorrow.
@@ -275,7 +275,7 @@ export default function Home() {
           </div>
           <div>
             <GradientLink
-              href="https://github.com/nation3/gov/blob/main/GOVERNANCE.md"
+              href="https://www.figma.com/file/tbvWJ8S962j1hHJJfaCOMK/Nation3---Cloud-Nation-Ecosystem?node-id=439%3A1262"
               text="Explore the tech tree"
             />
           </div>

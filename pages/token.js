@@ -12,7 +12,7 @@ const Stat = ({ number, legend }) => (
     <h1 className="text-5xl font-medium bg-gradient-to-r from-n3blue to-n3green text-transparent bg-clip-text font-display">
       {number}
     </h1>
-    <p>{legend}</p>
+    <p className="dark:text-white">{legend}</p>
   </div>
 )
 
@@ -46,7 +46,7 @@ export default function Token() {
       </h1>
       <div className="relative flex flex-row gap-8 lg:w-full justify-cente my-16">
         <div className="md:basis-3/5 flex flex-col items-center">
-          <p className="text-lg">
+          <p className="text-lg dark:text-white">
             For Nation3 to succeed, the demand for its citizenship needs to be
             tied to the nation's financial success. And that's exactly what
             $NATION does.
@@ -69,12 +69,12 @@ export default function Token() {
           <Image src={Nation3Icon} layout="fill" />
         </div>
       </div>
-      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 md:pt-16 relative bg-white z-1">
-        <Stat number={'>67 %'} legend={'of total supply locked'} />
+      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 md:pt-16 relative z-1">
+        <Stat number={'>67 %'} legend={'of circulating supply locked'} />
         <Stat number={'>2 $veNATION'} legend={'needed to claim a passport'} />
         <Stat number={'>30%'} legend={'$NATION/ETH liquidity rewards APY'} />
       </div>
-      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:w-full justify-cente my-16 md:my-32 items-center">
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:w-full justify-cente my-16 md:my-32 items-center dark:text-white">
         <div className="md:basis-3/5">
           <h2 className="font-display text-3xl mb-2">Community dashboards</h2>
           <p>
@@ -83,7 +83,7 @@ export default function Token() {
           </p>
         </div>
         <div className="md:basis-2/5 relative">
-          <div className="flex grid grid-cols-1 md:grid-cols-3 gap-2 relative bg-white z-1">
+          <div className="flex grid grid-cols-1 md:grid-cols-3 gap-2 relative  z-1">
             <Dashboard
               name="$NATION overview"
               href="https://dune.com/linzi/Nation3-Dashboard"
@@ -102,7 +102,7 @@ export default function Token() {
           </div>
         </div>
       </div>
-      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 relative bg-white">
+      <div className="flex grid lg:grid-flow-col grid-flow-row gap-16 relative dark:text-white">
         <div>
           <Image src={WorldIcon} width={42} height={42} />
           <h2 className="text-2xl leading-loose">Earn $NATION</h2>
