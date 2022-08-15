@@ -1,106 +1,105 @@
 import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Footer } from 'flowbite-react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Logo from '../public/logo.svg'
+import Icon from '../public/icon.svg'
 import GradientLink from './GradientLink'
 import Script from 'next/script'
 import Announcement from './Announcement'
+import { Navbar, Button, Tooltip } from 'flowbite-react'
+import {
+  FaDiscord,
+  FaGithub,
+  FaDiscourse,
+  FaVoteYea,
+  FaBookOpen,
+} from 'react-icons/fa'
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
+  { name: '$NATION', href: '/token' },
+  { name: 'FAQ', href: '/faq' },
   { name: 'Citizen app', href: 'https://app.nation3.org' },
-  { name: 'Wiki', href: 'https://wiki.nation3.org' },
-  { name: 'Discord', href: 'https://discord.gg/nation3' },
-  { name: 'Governance', href: 'https://vote.nation3.org' },
 ]
+
+// main nav
+// manifesto, $nation, FAQ
 
 export default function Layout({ children }) {
   return (
-    <div className="container max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 mb-8 overflow-x-hidden">
-      <Script src="https://cdn.splitbee.io/sb.js" />
-      <Popover>
-        <div className="relative pt-6 mb-36 z-10">
-          <nav className="relative flex items-center justify-between sm:h-10">
-            <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-              <div className="flex items-center justify-between w-full md:w-auto cursor-pointer">
-                <Link href="/">
-                  <a>
-                    <Image src={Logo} width={128} height={50} />
-                  </a>
-                </Link>
-                <div className="mr-2 flex items-center md:hidden">
-                  {
-                    <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
-                      <span className="sr-only">Open main menu</span>
-                      <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                    </Popover.Button>
-                  }
+    <>
+      <div className="container h-full max-w-screen-xl mx-auto px-6 lg:px-8 mt-4">
+        <Script src="https://cdn.splitbee.io/sb.js" />
+        <div className="relative mb-4 z-10 -mx-4">
+          <Navbar fluid={true} rounded={true}>
+            <Navbar.Brand>
+              <Link href="/" passHref>
+                <div className="flex flex-row gap-2 cursor-pointer hover:opacity-80 transition">
+                  <Image src={Icon} width={50} height={50} alt="Nation3 logo" />
+                  <span className="self-center whitespace-nowrap text-lg font-light dark:text-white">
+                    Nation3
+                  </span>
                 </div>
+              </Link>
+            </Navbar.Brand>
+            <div className="flex md:order-2">
+              <div className="hidden md:block">
+                <Link href="/join#carousel" passHref>
+                  <Button color="primary">Become a citizen</Button>
+                </Link>
               </div>
+              <Navbar.Toggle />
             </div>
-            <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-16">
+            <Navbar.Collapse>
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="font-medium text-gray-500 hover:text-gray-900"
-                >
-                  {item.name}
-                </Link>
+                <Navbar.Link key={item.href}>
+                  <Link key={item.name} href={item.href} passHref>
+                    <span className="cursor-pointer text-base font-display">
+                      {item.name}
+                    </span>
+                  </Link>
+                </Navbar.Link>
               ))}
-            </div>
-          </nav>
+              <div className="md:hidden">
+                <Link href="/join#carousel" passHref>
+                  <Button color="primary">Become a citizen</Button>
+                </Link>
+              </div>
+            </Navbar.Collapse>
+          </Navbar>
         </div>
-
-        <Transition
-          as={Fragment}
-          enter="duration-150 ease-out"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="duration-100 ease-in"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Popover.Panel
-            focus
-            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-          >
-            <div className="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
-              <div className="px-5 pt-4 flex items-center justify-end">
-                <div className="mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500">
-                    <span className="sr-only">Close main menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
+        {children}
+        <footer className="py-6 mt-16 flex justify-between">
+          <div className="w-full">
+            <div className="w-full sm:flex sm:items-center sm:justify-between">
+              <div className="relative w-8 h-8">
+                <Image src="/icon-plain.svg" layout="fill" alt="Nation3 icon" />
               </div>
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    {item.name}
-                  </a>
-                ))}
+              <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
+                <Footer.Icon
+                  href="https://discord.gg/nation3"
+                  icon={FaDiscord}
+                />
+                <Footer.Icon
+                  href="https://forum.nation3.org"
+                  icon={FaDiscourse}
+                />
+                <Footer.Icon href="https://gov.nation3.org" icon={FaVoteYea} />
+                <Footer.Icon
+                  href="https://github.com/nation3"
+                  icon={FaGithub}
+                />
+                <Footer.Icon
+                  href="https://wiki.nation3.org"
+                  icon={FaBookOpen}
+                />
               </div>
             </div>
-          </Popover.Panel>
-        </Transition>
-      </Popover>
-      {children}
-      <footer className="mt-8 md:mt-32 flex justify-between font-light">
-        <p>☁️ 🇺🇳</p>
-        <GradientLink
-          href="https://twitter.com/nation3dao"
-          text="@Nation3DAO"
-          hideArrow={true}
-        />
-      </footer>
+          </div>
+        </footer>
+      </div>
       <Announcement />
-    </div>
+    </>
   )
 }
