@@ -5,12 +5,14 @@
 @tailwind utilities;
 
 html,
-body {
+body,
+#__next {
   padding: 0;
   margin: 0;
+  height: 100%;
   /*font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;*/
-  @apply font-body;
+  @apply font-body overflow-x-hidden;
 }
 
 a {
@@ -20,4 +22,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+  @apply text-white !important;
+}
+
+.swiper .swiper-pagination-progressbar-fill {
+  @apply bg-n3blue !important;
 }

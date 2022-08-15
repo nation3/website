@@ -13,7 +13,7 @@ import TwitterIcon from '../public/icons/twitter.svg'
 
 export default function Manifesto() {
   return (
-    <div className="text-lg">
+    <div className="text-lg mt-24 dark:text-white">
       <Head
         title="Manifesto"
         description="It's time to reinvent the nation state."
@@ -101,7 +101,7 @@ export default function Manifesto() {
           Their outdated, Industrial Era education system is producing human
           robots that memorize well but don't ask the why nor the what if.
         </h1>
-        <h1 className="text-2xl tracking-loose text-gray-900 sm:text-4xl md:text-5xl md:leading-tight">
+        <h1 className="text-2xl tracking-loose text-gray-900 sm:text-4xl md:text-5xl md:leading-tight dark:text-white">
           Many today don’t know of creativity nor basic concepts like what
           inflation is — creating unparalleled unemployment across regions like
           Southern Europe.
@@ -168,7 +168,7 @@ export default function Manifesto() {
         We need to reimagine new nations and we need to{' '}
         <span className="border-b-4 border-n3green">build them</span>.
       </h1>
-      <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48">
+      <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48 overflow-hidden">
         <Image src={Manifesto5}></Image>
       </div>
 
@@ -256,7 +256,7 @@ export default function Manifesto() {
       <div className="max-w-2xl m-auto my-6 md:my-16 font-light">
         <div className="md:-mx-1">
           <h3 className="text-lg md:text-xl">Rebuilding nations with Web3</h3>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-loose text-gray-900 md:leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-loose text-gray-900 md:leading-tight dark:text-white">
             Web3 is much more than a new Internet.
           </h1>
           <h1 className="text-3xl sm:text-4xl md:text-5xl tracking-loose  bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text mt-1 md:leading-tight">
@@ -312,12 +312,12 @@ export default function Manifesto() {
         </p>
       </div>
       <div className="flex grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
-        <div className="bg-zinc-50 p-8">
+        <div className="bg-zinc-50 p-8 dark:bg-gray-700">
           <Image src={Nation1Icon} width={74} height={74}></Image>
           <h4 className="text-lg text-gray-400 mt-16">Nation1</h4>
           <h4 className="text-3xl font-light">Arbitrary Dictatorship</h4>
         </div>
-        <div className="bg-zinc-50 p-8">
+        <div className="bg-zinc-50 p-8 dark:bg-gray-700">
           <Image src={Nation2Icon} width={74} height={74}></Image>
           <h4 className="text-lg text-gray-400 mt-16">Nation2</h4>
           <h4 className="text-3xl font-light">Monolithic Democracy</h4>
