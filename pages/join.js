@@ -40,7 +40,7 @@ export default function Join({ carouselItems }) {
         type="website"
       />
       <div className="h-screen flex flex-col" id="carousel">
-        <div className="my-8 h-full rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-80 bg-gradient-to-r from-n3blue to-n3green text-white overflow-hidden">
+        <div className="-ml-16 -mr-8 md:mx-0 md:my-8 h-full rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-80 bg-gradient-to-r from-n3blue to-n3green text-white overflow-hidden">
           <Swiper
             pagination={{
               type: 'progressbar',
@@ -55,7 +55,7 @@ export default function Join({ carouselItems }) {
             {carouselItems.map((item, i) => (
               <SwiperSlide key={i}>
                 <CarouselItem image={item.image}>
-                  <div className="prose prose-lg text-white prose-h1:font-display prose-h1:text-white prose-h1:font-light prose-h1:text-5xl prose-h1:mb-4 prose-h2:font-display prose-h2:text-white prose-h2:font-normal prose-h2:text-4xl prose-h2:mb-4 prose-h2:mt-0 prose-h3:font-display prose-h3:text-white prose-h3:font-normal prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-0 prose-a:text-white prose-li:my-0">
+                  <div className="prose prose-sm md:prose-lg text-white prose-h1:font-display prose-h1:text-white prose-h1:font-light md:prose-h1:text-5xl prose-h1:mb-4 prose-h2:font-display prose-h2:text-white prose-h2:font-normal md:prose-h2:text-4xl prose-h2:mb-4 prose-h2:mt-0 prose-h3:font-display prose-h3:text-white prose-h3:font-normal md:prose-h3:text-2xl prose-h3:mb-4 prose-h3:mt-0 prose-a:text-white prose-li:my-0">
                     <MDXRemote {...item.serialized} components={components} />
                   </div>
                 </CarouselItem>
