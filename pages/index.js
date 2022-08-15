@@ -238,9 +238,9 @@ export default function Home() {
               </Timeline.Item>
             ))}
           </Timeline>
-          <div className="w-full flex flex-col items-center">
+          {/*<div className="w-full flex flex-col items-center">
             <Button color="primary">Check out the roadmap</Button>
-          </div>
+          </div>*/}
         </div>
       </div>
 
