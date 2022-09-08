@@ -77,10 +77,7 @@ export default function Layout({ children }) {
                 <Image src="/icon-plain.svg" layout="fill" alt="Nation3 icon" />
               </div>
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                <Footer.Icon
-                  href="https://discord.gg/nation3"
-                  icon={FaDiscord}
-                />
+                <Footer.Icon href="https://n3.gg/discord" icon={FaDiscord} />
                 <Footer.Icon
                   href="https://forum.nation3.org"
                   icon={FaDiscourse}

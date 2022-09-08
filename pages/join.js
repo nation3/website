@@ -83,7 +83,7 @@ export async function getStaticProps({ params }) {
       want to live in.
 
       - $NATION is your entry point into the ecosystem. You can [buy some here](https://app.balancer.fi/#/trade/ether/0x333A4823466879eeF910A04D473505da62142069), or earn it by completing [open tasks on Dework](https://app.dework.xyz/nation3/board)
-      - Head over to [Discord](https://discord.gg/nation3) and introduce yourself to the community
+      - Head over to [Discord](https://n3.gg/discord) and introduce yourself to the community
       - Majority of tasks and discussion channels are token-gated to citizens 
       (pro tip: you’d want to get at least 2 $NATION)`,
       image: '/icons/nation3.svg',
@@ -111,7 +111,7 @@ export async function getStaticProps({ params }) {
       ### Ready to grab your passport?
 
       - [Lock up](https://app.nation3.org/lock) your $NATION to obtain more than 2 $veNATION* - your skin-in-the-state. Whenever your lock expires, the underlying $NATION is yours to keep, sell, or re-lock
-      - While we’re devising a social vouching mechanism to ensure Nation3 is inclusive to everyone regardless of their financial background, you can still get verified on [Discord](https://discord.gg/nation3) and get access to [Dework tasks](https://app.dework.xyz/nation3/board) with a minimum balance of 0.1 $veNATION. You can earn the rest you need for a passport by completing paid tasks`,
+      - While we’re devising a social vouching mechanism to ensure Nation3 is inclusive to everyone regardless of their financial background, you can still get verified on [Discord](https://n3.gg/discord) and get access to [Dework tasks](https://app.dework.xyz/nation3/board) with a minimum balance of 0.1 $veNATION. You can earn the rest you need for a passport by completing paid tasks`,
       image: '/join/passport.svg',
     },
     {
