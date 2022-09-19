@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Head from '../components/Head'
 import BigTitle from '../components/BigTitle'
 import GradientLink from '../components/GradientLink'
+import BlogPost from '../components/BlogPost'
 import Flag from '../public/flag.svg'
 import HalfOrb from '../public/half-orb.svg'
 import Manifesto5 from '../public/manifesto/5.svg'
@@ -14,6 +15,7 @@ import WHOPhoto from '../public/photos/who.png'
 import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
+import fetchMeta from 'fetch-meta-tags'
 
 const tradStateImages = [
   {
@@ -107,7 +109,7 @@ const timelineItems = [
   },
 ]
 
-export default function Home() {
+export default function Home({ posts }) {
   const [width, setWidth] = useState(0)
 
   useEffect(() => {
@@ -246,6 +248,23 @@ export default function Home() {
 
       <div className="relative flex flex-col gap-8 mx-auto my-16 lg:my-32 xl:my-48 lg:w-full">
         <div className="text-left">
+          <BigTitle text="Our thoughts" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-16">
+            {posts.map((post, i) => (
+              <BlogPost
+                key={i}
+                title={post.title}
+                description={post.description}
+                image={post.image}
+                url={post.url}
+              ></BlogPost>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative flex flex-col gap-8 mx-auto my-16 lg:my-32 xl:my-48 lg:w-full">
+        <div className="text-left">
           <BigTitle
             text="Want to co-found a nation?"
             gradientText="Join the movement"
@@ -283,4 +302,23 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export const getStaticProps = async () => {
+  const posts = await Promise.all(
+    [
+      'https://mirror.xyz/writings.nation3.eth/5Y2QNLOYWlkXL7RH8utRHqmx_6H430q-ADGi4ZuzbHo',
+      'https://mirror.xyz/writings.nation3.eth/RUl_BPCU5bbbA2GB36ZZStmk4kLhlqzMO-PzRTIhHpw',
+      'https://mirror.xyz/writings.nation3.eth/YoT8BtioUPZx3QKgdLcoVBuI7UIddWjk_uiCh2iBuy0',
+    ].map((url) => fetchMeta(url))
+  )
+
+  console.log(posts)
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 1,
+  }
 }
