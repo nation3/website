@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Head from '../components/Head'
 import BigTitle from '../components/BigTitle'
 import GradientLink from '../components/GradientLink'
-import BlogPost from '../components/BlogPost'
+import Projects from '../components/Projects'
+import Roadmap from '../components/Roadmap'
+import CardLink from '../components/CardLink'
 import Flag from '../public/flag.svg'
 import HalfOrb from '../public/half-orb.svg'
 import Manifesto5 from '../public/manifesto/5.svg'
@@ -12,7 +14,6 @@ import Card from 'react-animated-3d-card-shadow'
 import BurningPhoto from '../public/photos/burning.jpg'
 import PutinPhoto from '../public/photos/putin.jpg'
 import WHOPhoto from '../public/photos/who.png'
-import { CalendarIcon, ExternalLinkIcon } from '@heroicons/react/outline'
 import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 import fetchMeta from 'fetch-meta-tags'
@@ -29,83 +30,6 @@ const tradStateImages = [
   {
     photo: WHOPhoto,
     link: 'https://edition.cnn.com/2020/03/30/world/coronavirus-who-masks-recommendation-trnd/index.html',
-  },
-]
-
-const timelineItems = [
-  {
-    phase: 1,
-    title: 'Setting the groundwork',
-    subitems: [
-      {
-        title: 'Nation3 Manifesto first published + $NATION airdrop',
-        link: 'https://mirror.xyz/3.nation3.eth/ldUGMXZ-yDCXsvaZnQIGqK2zFRR7AmjRmgv2ZmDFNbo',
-      },
-      {
-        title: '420 Genesis NFT passports launch for co-founding community',
-        link: 'https://mirror.xyz/3.nation3.eth/ldUGMXZ-yDCXsvaZnQIGqK2zFRR7AmjRmgv2ZmDFNbo',
-      },
-      {
-        title: 'Kickstart internal economy on Dework',
-        link: 'https://app.dework.xyz/nation3',
-      },
-      {
-        title:
-          'Optimize governance process to allow fast-moving, decentralised decisions',
-        link: 'https://vote.nation3.org/#/proposal/0x6a8d5266c40d0be9a57ec52294db243e1a508e5be756227d3eb1659e9f64b609',
-      },
-      {
-        title:
-          'Build healthy treasury reserves to sustain long term operations',
-        link: '',
-      },
-      {
-        title: 'Launch the Court system for fair dispute resolution',
-        link: '',
-      },
-      {
-        title: 'Introduce UBI for Nation3 citizens',
-        link: '',
-      },
-      {
-        title: 'Launch standard Citizen Passports',
-        link: '',
-      },
-    ],
-  },
-  {
-    phase: 2,
-    title: 'Building towards the Nation3 tech stack',
-    subitems: [
-      {
-        title:
-          'Add products & services for Nation3 Citizens, such as circles-based insurance and opsec tools',
-      },
-      {
-        title:
-          'Develop key pieces of infrastructure through project Guilds internally',
-      },
-      {
-        title:
-          'Launch Nation3 VC (subject to governance vote) to scout & back external products & services for cloud nations',
-      },
-    ],
-  },
-  {
-    phase: 3,
-    title: 'Establish physical presence',
-    subitems: [
-      {
-        title: 'Open embassies where citizens can connect IRL',
-      },
-      {
-        title: 'Grow a global archipelago of Nation3 territories',
-      },
-      {
-        title:
-          'Negotiate land with Special Economic Zones (SEZs) to establish first tax-free, solar punk cities',
-      },
-    ],
   },
 ]
 
@@ -204,42 +128,20 @@ export default function Home({ posts }) {
         </div>
       </div>
 
+      <div className="relative flex flex-col gap-8 mx-auto mb-16 lg:mb-32 xl:mb-48 lg:w-full">
+        <div className="text-left">
+          <BigTitle text="Our projects" />
+          <Projects />
+        </div>
+      </div>
+
       <div className="max-w-5xl lg:mt-16 m-auto">
         <div className="w-full relative hidden lg:block">
           <div className="bg-gradient-to-b from-transparent via-white to-white dark:via-gray-800 dark:to-gray-800 absolute w-full h-full z-10"></div>
           <Image src={HalfOrb} layout="responsive" />
         </div>
         <div className="max-w-2xl m-auto rounded-lg lg:pt-32 lg:-mt-96 relative z-20">
-          <Timeline>
-            {timelineItems.map((item, i) => (
-              <Timeline.Item key={i}>
-                <Timeline.Point icon={CalendarIcon} />
-                <Timeline.Content>
-                  <Timeline.Time>Phase {item.phase}</Timeline.Time>
-                  <Timeline.Title>{item.title}</Timeline.Title>
-                  <ul className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 align-middle list-disc">
-                    {item.subitems.map((item, i) => (
-                      <li key={i}>
-                        {item.title}
-                        {item.link && (
-                          <>
-                            .{' '}
-                            <a
-                              href={item.link}
-                              className="text-n3blue hover:opacity-70 transition-opacity"
-                            >
-                              Done
-                              <ExternalLinkIcon className="w-4 h-4 inline-block ml-1 mb-1 text-gray-500" />
-                            </a>
-                          </>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </Timeline.Content>
-              </Timeline.Item>
-            ))}
-          </Timeline>
+          <Roadmap />
           {/*<div className="w-full flex flex-col items-center">
             <Button color="primary">Check out the roadmap</Button>
           </div>*/}
@@ -251,13 +153,14 @@ export default function Home({ posts }) {
           <BigTitle text="Our thoughts" />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-16">
             {posts.map((post, i) => (
-              <BlogPost
+              <CardLink
                 key={i}
                 title={post.title}
-                description={post.description}
                 image={post.image}
                 url={post.url}
-              ></BlogPost>
+              >
+                {post.description}
+              </CardLink>
             ))}
           </div>
         </div>
@@ -310,10 +213,11 @@ export const getStaticProps = async () => {
       'https://mirror.xyz/writings.nation3.eth/5Y2QNLOYWlkXL7RH8utRHqmx_6H430q-ADGi4ZuzbHo',
       'https://mirror.xyz/writings.nation3.eth/RUl_BPCU5bbbA2GB36ZZStmk4kLhlqzMO-PzRTIhHpw',
       'https://mirror.xyz/writings.nation3.eth/YoT8BtioUPZx3QKgdLcoVBuI7UIddWjk_uiCh2iBuy0',
+      'https://mirror.xyz/writings.nation3.eth/IkI3u7YEI0GYEK5cz2WqU6kno-YDEik1K0WT--uHzfw',
+      'https://mirror.xyz/writings.nation3.eth/AOOXi_YLeQgTa1xSsjdgkym740uiKYpvNt2LhE9Neik',
+      'https://mirror.xyz/writings.nation3.eth/hdCkkEWV17VHZyVtRpRnL11UsqpT9OzoicVVHueZftA',
     ].map((url) => fetchMeta(url))
   )
-
-  console.log(posts)
 
   return {
     props: {
