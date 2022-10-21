@@ -6,6 +6,7 @@ const projects = [
     title: 'Citizenship as an experience',
     image:
       'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
+    url: 'https://app.nation3.org',
     children: (
       <>
         Citizens can stake $NATION to obtain an <b>NFT passport</b>. They can
@@ -19,6 +20,7 @@ const projects = [
     title: 'Internet-native legal system',
     image:
       'https://mirror-media.imgix.net/publication-images/ZUbyJJNHqYrtqUmLVASl9.png?height=544&width=1088&h=544&w=1088&auto=compress',
+    url: 'https://mirror.xyz/writings.nation3.eth/YoT8BtioUPZx3QKgdLcoVBuI7UIddWjk_uiCh2iBuy0',
     children: (
       <>
         Crypto created an Internet-native financial system, superseding the
@@ -33,6 +35,7 @@ const projects = [
     title: 'Basic income for citizens',
     image:
       'https://mirror-media.imgix.net/publication-images/6j4CYyaRGmxNvj7cxX83W.png?height=512&width=1024&h=512&w=1024&auto=compress',
+    url: 'https://mirror.xyz/writings.nation3.eth/AOOXi_YLeQgTa1xSsjdgkym740uiKYpvNt2LhE9Neik',
     children: (
       <ul>
         <li>
