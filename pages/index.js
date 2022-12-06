@@ -145,11 +145,12 @@ export default function Home({ posts }) {
     },
   ]
 
-  const cards = items.map(({ name, role, twitter, pic }) => {
+  const cards = items.map(({ name, role, twitter, pic }, i) => {
     return (
       <GradientBorderCard
         className="p-4 text-center flex flex-col justify-center align-items-center gap-4"
         containerClassName="w-64 h-48"
+        key={i}
       >
         <div className="flex flex-row justify-center align-items-center">
           <div className="relative w-16 h-16">
