@@ -33,21 +33,37 @@ a {
   @apply bg-n3blue !important;
 }
 
-/* the new container */
-.swiper {
-  position: relative !important;
-  width: 100%;
-  padding: 0 48px !important;
+@media (max-width: 600px) {
+
+  /* fix the buttons positions */
+  .swiper-button-prev {
+    display: none !important;
+  }
+
+  .swiper-button-next {
+    display: none !important;
+  }
 }
 
-/* fix the buttons positions */
-.swiper-button-prev {
-  left: 0;
+
+@media (min-width: 600px) {
+  /* the new container */
+  .swiper {
+    position: relative !important;
+    width: 100%;
+    padding: 0 92px !important;
+  }
+
+  /* fix the buttons positions */
+  .swiper-button-prev {
+    left: 0  !important;
+  }
+
+  .swiper-button-next {
+    right: 0 !important;
+  }
 }
 
-.swiper-button-next {
-  right: 0 !important;
-}
 
 @keyframes scroll {
   0% {
@@ -63,6 +79,10 @@ a {
 }
 
 .full-width {
-  margin-left: calc(-100vw / 2 + 500px / 2);
-  margin-right: calc(-100vw / 2 + 500px / 2);
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }

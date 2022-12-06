@@ -213,26 +213,31 @@ export default function Home({ posts }) {
         </div>
       </div>
 
-      <div className="relative flex flex-col gap-8 mx-auto my-16 lg:my-32 xl:my-48 lg:w-full">
+      <div className="flex flex-col mx-auto my-16 px-8 lg:px-0 full-width">
         <div className="text-center">
           <BigTitle text="Our thoughts" />
+          <p className="max-w-md m-auto mb-16">
+            Read about our journey creating a country on the Internet.
+          </p>
           <Swiper
             pagination={true}
             navigation={true}
-            centeredSlides={true}
-            initialSlide={2}
+            spaceBetween={16}
             breakpoints={{
               640: {
                 slidesPerView: 1,
-                spaceBetween: 8,
               },
               768: {
-                slidesPerView: 3,
-                spaceBetween: 32,
+                slidesPerView: 2,
               },
               1024: {
                 slidesPerView: 3,
-                spaceBetween: 16,
+              },
+              1440: {
+                slidesPerView: 4,
+              },
+              1660: {
+                slidesPerView: 5,
               },
             }}
             modules={[Pagination, Navigation, Keyboard]}
@@ -243,12 +248,15 @@ export default function Home({ posts }) {
             {posts.map(({ title, image, url, description }, i) => (
               <SwiperSlide key={i}>
                 <div className="mb-12">
-                  <GradientBorderCard className="text-left flex flex-col justify-center align-items-center gap-4 shadow-xl">
+                  <GradientBorderCard
+                    className="text-left flex flex-col justify-center align-items-center gap-4 shadow-xl"
+                    containerClassName="max-w-sm"
+                  >
                     <img
                       src={image}
                       className="rounded-tl-2xl rounded-tr-2xl"
                     />
-                    <div className="p-4">
+                    <div className="px-4 pb-4">
                       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                         {title}
                       </h5>
@@ -261,18 +269,6 @@ export default function Home({ posts }) {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8 lg:mt-16">
-            {posts.map((post, i) => (
-              <CardLink
-                key={i}
-                title={post.title}
-                image={post.image}
-                url={post.url}
-              >
-                {post.description}
-              </CardLink>
-            ))}
-          </div>
         </div>
       </div>
       <div
@@ -317,7 +313,7 @@ of the world’s first internet-native jurisdiction"
       </div>
       <div className="text-center mt-32 mb-16 -mx-24 xl:mx-0 xl:px-0">
         <BigTitle text="Meet the citizens" />
-        <p className="max-w-md m-auto mt-4">
+        <p className="max-w-md m-auto mt-4 px-4">
           Nation3 has caught the attention of some of the leading thinkers and
           doers in the space.
         </p>
@@ -326,7 +322,7 @@ of the world’s first internet-native jurisdiction"
         </div>
       </div>
       <Image src={SolarpunkCity2} />
-      <div className="text-center grid justify-items-center align-items-center py-32">
+      <div className="text-center grid justify-items-center align-items-center py-8 lg:py-32">
         <BigTitle text="Be part of Nation3" />
         <p className="max-w-md m-auto text-lg text-center dark:text-white mb-4">
           Online-first, zero-tax nation with its own jurisdiction, court and
@@ -352,12 +348,20 @@ export const getStaticProps = async () => {
 
   const posts = [
     {
-      title: 'test',
+      title: 'The scope of a nation',
       image:
         'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
       url: '',
       description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
+    },
+    {
+      title: "We don't really need taxes",
+      image:
+        'https://mirror-media.imgix.net/publication-images/8brzF7FrwZ8OUnJros5CU.png?height=1062&width=2124&h=1062&w=2124&auto=compress',
+      url: '',
+      description:
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics ",
     },
     {
       title: 'test',
@@ -365,7 +369,7 @@ export const getStaticProps = async () => {
         'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
       url: '',
       description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics ",
     },
     {
       title: 'test',
@@ -373,7 +377,7 @@ export const getStaticProps = async () => {
         'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
       url: '',
       description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
     },
     {
       title: 'test',
@@ -381,7 +385,7 @@ export const getStaticProps = async () => {
         'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
       url: '',
       description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
     },
     {
       title: 'test',
@@ -389,15 +393,7 @@ export const getStaticProps = async () => {
         'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
       url: '',
       description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
-    },
-    {
-      title: 'test',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics — like improving common goods or implementing technology that would benefit everyone. ",
+        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
     },
   ]
 
