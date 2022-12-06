@@ -17,6 +17,7 @@ import HeadlineLG from '../public/headline-lg.svg'
 import HeadlineDark from '../public/headline-dark.svg'
 import HeadlineDarkLG from '../public/headline-lg-dark.svg'
 import HeroAnimation from '../public/hero.json'
+import VideoBg from '../public/illustrations/video-bg.svg'
 import SolarpunkCity from '../public/illustrations/solarpunk-city.svg'
 import Constitution from '../public/illustrations/constitution.svg'
 import ConstitutionText from '../public/illustrations/constitution-text.svg'
@@ -159,7 +160,7 @@ export default function Home({ posts }) {
             <div className="bg-gradient-to-b from-n3blue to-n3green opacity-75 absolute top-0 right-0 bottom-0 left-0 z-10 rounded-full"></div>
           </div>
         </div>
-        <p className="font-medium text-xl">{name}</p>
+        <p className="font-medium text-xl dark:text-white">{name}</p>
         <p className="text-n3blue text-xl">{role}</p>
       </GradientBorderCard>
     )
@@ -196,7 +197,7 @@ export default function Home({ posts }) {
           text="The world's first"
           gradientText="Internet-native jurisdiction"
         />
-        <p className="max-w-md m-auto mt-4">
+        <p className="max-w-md m-auto mt-4 dark:text-white">
           Nation3 gives you the legal guarantees you need to safely transact on
           the Internet, without resorting to traditional countries and endless
           bureaucracy.
@@ -211,12 +212,13 @@ export default function Home({ posts }) {
             title="Embedded youtube"
           />
         </div>
+        <Image src={VideoBg} className="full-width -mt-36 -z-10" />
       </div>
 
       <div className="flex flex-col mx-auto my-16 px-8 lg:px-0 full-width">
         <div className="text-center">
           <BigTitle text="Our thoughts" />
-          <p className="max-w-md m-auto mb-16">
+          <p className="max-w-md m-auto mb-16 dark:text-white">
             Read about our journey creating a country on the Internet.
           </p>
           <Swiper
@@ -271,49 +273,45 @@ export default function Home({ posts }) {
           </Swiper>
         </div>
       </div>
-      <div
-        className="text-center py-24 bg-right-bottom bg-no-repeat -mx-16 px-16 xl:full-width xl:mx-0 xl:px-0"
-        style={{
-          backgroundImage:
-            'url("/illustrations/constitution-bg.svg"), linear-gradient(#EEF9FF, #EAFFF4)',
-        }}
-      >
-        <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-16">
-          <div className="lg:w-5/12 lg:text-left lg:py-16 ">
-            <BigTitle gradientText="Become a citizen" />
-            <BigTitle
-              text="and have a say in the Constitution
+      <div className="text-center -mx-16 px-16 xl:full-width xl:mx-0 xl:px-0 bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none">
+        <div className="bg-[url('/illustrations/constitution-bg.svg')] bg-right-bottom bg-no-repeat py-24">
+          <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-16">
+            <div className="lg:w-5/12 lg:text-left lg:py-16 ">
+              <BigTitle gradientText="Become a citizen" />
+              <BigTitle
+                text="and have a say in the Constitution
 of the world’s first internet-native jurisdiction"
-            />
-            <GradientLink text="Read the Nation3 Constitution" href={''} />
-          </div>
+              />
+              <GradientLink text="Read the Nation3 Constitution" href={''} />
+            </div>
 
-          <div className="hidden lg:block lg:w-7/12 flex flex-row relative z-0">
-            <div className="z-10">
-              <Card
-                style={{
-                  backgroundColor: 'transparent',
-                  width: 474,
-                  height: 660,
-                  cursor: 'pointer',
-                  zIndex: 10,
-                }}
-              >
-                <Image src={Constitution} fill={true} />
-              </Card>
+            <div className="hidden lg:block lg:w-7/12 flex flex-row relative z-0">
+              <div className="z-10">
+                <Card
+                  style={{
+                    backgroundColor: 'transparent',
+                    width: 474,
+                    height: 660,
+                    cursor: 'pointer',
+                    zIndex: 10,
+                  }}
+                >
+                  <Image src={Constitution} fill={true} />
+                </Card>
+              </div>
+              <div className="hidden lg:block absolute -right-4 top-20 mt-2 -z-10">
+                <Image src={ConstitutionText} className="z-0" />
+              </div>
             </div>
-            <div className="hidden lg:block absolute -right-4 top-20 mt-2 -z-10">
-              <Image src={ConstitutionText} className="z-0" />
+            <div className="lg:hidden flex justify-center">
+              <Image src={Constitution} className="shadow-xl rounded-xl" />
             </div>
-          </div>
-          <div className="lg:hidden flex justify-center">
-            <Image src={Constitution} className="shadow-xl rounded-xl" />
           </div>
         </div>
       </div>
       <div className="text-center mt-32 mb-16 -mx-24 xl:mx-0 xl:px-0">
         <BigTitle text="Meet the citizens" />
-        <p className="max-w-md m-auto mt-4 px-4">
+        <p className="max-w-md m-auto mt-4 px-4 dark:text-white">
           Nation3 has caught the attention of some of the leading thinkers and
           doers in the space.
         </p>
