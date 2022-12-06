@@ -11,8 +11,8 @@ export default function TextLink({ children, href, className }) {
   return (
     <>
       {!absolute ? (
-        <Link href={href}>
-          <a className={classes}>{children}</a>
+        <Link href={href} className={classes}>
+          {children}
         </Link>
       ) : (
         <a

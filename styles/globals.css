@@ -24,10 +24,45 @@ a {
   box-sizing: border-box;
 }
 
-.swiper .swiper-button-prev, .swiper .swiper-button-next {
+/*.swiper .swiper-button-prev, .swiper .swiper-button-next {
   @apply text-white !important;
-}
+}*/
+
 
 .swiper .swiper-pagination-progressbar-fill {
   @apply bg-n3blue !important;
+}
+
+/* the new container */
+.swiper {
+  position: relative !important;
+  width: 100%;
+  padding: 0 48px !important;
+}
+
+/* fix the buttons positions */
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+@keyframes scroll {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+.animate {
+  animation: scroll 25s linear infinite;
+}
+
+.full-width {
+  margin-left: calc(-100vw / 2 + 500px / 2);
+  margin-right: calc(-100vw / 2 + 500px / 2);
 }
