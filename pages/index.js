@@ -2,16 +2,8 @@ import Image from 'next/image'
 import Head from '../components/Head'
 import BigTitle from '../components/BigTitle'
 import GradientLink from '../components/GradientLink'
-import Projects from '../components/Projects'
-import Roadmap from '../components/Roadmap'
-import CardLink from '../components/CardLink'
-import Flag from '../public/flag.svg'
-import HalfOrb from '../public/half-orb.svg'
-import Manifesto5 from '../public/manifesto/5.svg'
-import TechTree from '../public/tech-tree.png'
 import Icon from '../public/icon.svg'
 import Card from 'react-animated-3d-card-shadow'
-import OnTheCloud from '../public/on-the-cloud.svg'
 import Headline from '../public/headline.svg'
 import HeadlineLG from '../public/headline-lg.svg'
 import HeadlineDark from '../public/headline-dark.svg'
@@ -21,14 +13,12 @@ import VideoBg from '../public/illustrations/video-bg.svg'
 import SolarpunkCity from '../public/illustrations/solarpunk-city.svg'
 import Constitution from '../public/illustrations/constitution.svg'
 import ConstitutionText from '../public/illustrations/constitution-text.svg'
-import ConstitutionBg from '../public/illustrations/constitution-bg.svg'
 import SolarpunkCity2 from '../public/illustrations/solarpunk-city-2.svg'
-import { Timeline, Button, Card as FlowbiteCard, Avatar } from 'flowbite-react'
+import { Button } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 import fetchMeta from 'fetch-meta-tags'
 import Lottie from 'lottie-react'
 
-import InfiniteCarousel from '../components/InfiniteCarousel'
 import GradientBorderCard from '../components/GradientBorderCard'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -38,6 +28,8 @@ import { Pagination, Navigation, Keyboard } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+import CitizensCarousel from '../components/CitizensCarousel'
+import BePart from '../components/BePart'
 
 export default function Home({ posts }) {
   const [width, setWidth] = useState(0)
@@ -106,67 +98,6 @@ export default function Home({ posts }) {
     },
   ]
 
-  const items = [
-    {
-      name: 'Tim Draper',
-      role: 'Legendary investor',
-      twitter: 'timdraper',
-      pic: 'https://pbs.twimg.com/profile_images/712463875975680000/yUVhpujj_400x400.jpg',
-    },
-    {
-      name: 'Sandeep Nailwal',
-      role: 'Founder, Polygon',
-      twitter: 'sandeepnailwal',
-      pic: 'https://pbs.twimg.com/profile_images/1571949221506420741/3aRt9iud_400x400.jpg',
-    },
-    {
-      name: 'Alex Masmej',
-      role: 'Founder, Showtime',
-      twitter: 'AlexMasmej',
-      pic: 'https://pbs.twimg.com/profile_images/1585481031653564422/nuPwlIQ1_400x400.jpg',
-    },
-    {
-      name: 'Santi Siri',
-      role: 'Founder, PoH',
-      twitter: 'santisiri',
-      pic: 'https://pbs.twimg.com/profile_images/1511355749913481216/tDQSHYB0_400x400.png',
-    },
-    {
-      name: 'Jake Brukhman',
-      role: 'Founder, CoinFund',
-      twitter: 'jbrukh',
-      pic: 'https://pbs.twimg.com/profile_images/1583116442764976128/iQTvJdWR_400x400.jpg',
-    },
-    {
-      name: 'Paul Kohlhaas',
-      role: 'Founder, Molecule',
-      twitter: 'paulkhls',
-      pic: 'https://pbs.twimg.com/profile_images/1444995367146344454/3YJbxvwq_400x400.jpg',
-    },
-  ]
-
-  const cards = items.map(({ name, role, twitter, pic }, i) => {
-    return (
-      <GradientBorderCard
-        className="p-4 text-center flex flex-col justify-center align-items-center gap-4"
-        containerClassName="w-64 h-48"
-        key={i}
-      >
-        <div className="flex flex-row justify-center align-items-center">
-          <div className="relative w-16 h-16">
-            <img
-              src={pic}
-              className="w-16 h-16 m-auto rounded-full absolute z-0 grayscale   sepia contrast-100 saturate-200 brightness-125"
-            />
-            <div className="bg-gradient-to-b from-n3blue to-n3green opacity-75 absolute top-0 right-0 bottom-0 left-0 z-10 rounded-full"></div>
-          </div>
-        </div>
-        <p className="font-medium text-xl dark:text-white">{name}</p>
-        <p className="text-n3blue text-xl">{role}</p>
-      </GradientBorderCard>
-    )
-  })
-
   return (
     <div>
       <Head
@@ -191,7 +122,7 @@ export default function Home({ posts }) {
           </p>
         </div>
       </div>
-      <Lottie animationData={HeroAnimation} />
+      <Lottie animationData={HeroAnimation} loop={false} />
 
       <div className="text-center flex flex-col justify-center">
         <BigTitle
@@ -207,10 +138,8 @@ export default function Home({ posts }) {
           <iframe
             className="absolute top-0 left-0 w-full h-full rounded-xl"
             src="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&mute=1&playlist=0GEulicKACw"
-            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            title="Embedded youtube"
           />
         </div>
         <Image src={VideoBg} className="full-width -mt-36 -z-10" />
@@ -301,7 +230,7 @@ of the world’s first internet-native jurisdiction"
                 </Card>
               </div>
               <div className="hidden lg:block absolute -right-4 top-20 mt-2 -z-10">
-                <Image src={ConstitutionText} className="z-0" />
+                <Image src={ConstitutionText} className="z-0" height={490} />
               </div>
             </div>
             <div className="lg:hidden flex justify-center">
@@ -310,25 +239,9 @@ of the world’s first internet-native jurisdiction"
           </div>
         </div>
       </div>
-      <div className="text-center mt-32 mb-16 -mx-24 xl:mx-0 xl:px-0">
-        <BigTitle text="Meet the citizens" />
-        <p className="max-w-md m-auto mt-4 px-4 dark:text-white">
-          Nation3 has caught the attention of some of the leading thinkers and
-          doers in the space.
-        </p>
-        <div className="mt-16">
-          <InfiniteCarousel items={cards} />
-        </div>
-      </div>
+      <CitizensCarousel />
       <Image src={SolarpunkCity2} />
-      <div className="text-center grid justify-items-center align-items-center py-8 lg:py-32">
-        <BigTitle text="Be part of Nation3" />
-        <p className="max-w-md m-auto text-lg text-center dark:text-white mb-4">
-          Online-first, zero-tax nation with its own jurisdiction, court and
-          system of law.
-        </p>
-        <Button color="primary">Become a citizen</Button>
-      </div>
+      <BePart />
     </div>
   )
 }
