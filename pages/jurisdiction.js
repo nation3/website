@@ -131,10 +131,10 @@ export default function Jurisdiction() {
             <p className="m-auto mt-2 mb-8 dark:text-white">
               No fees for 6 months.
             </p>
-            <div class="flex items-end mb-3">
-              <div class="relative w-full mr-3 revue-form-group">
+            <div className="flex items-end mb-3">
+              <div className="relative w-full mr-3 revue-form-group">
                 <input
-                  class="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-n3blue focus:border-n3blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-n3blue focus:border-n3blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Your email"
                   type="email"
                 />
@@ -142,7 +142,7 @@ export default function Jurisdiction() {
               <input
                 type="submit"
                 value="Sign up"
-                class="cursor-pointer text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gradient-to-r from-n3blue via-n3green to-n3green transition hover:scale-95"
+                className="cursor-pointer text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gradient-to-r from-n3blue via-n3green to-n3green transition hover:scale-95"
               />
             </div>
           </div>
