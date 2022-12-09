@@ -17,7 +17,7 @@ import SolarpunkCity2 from '../public/illustrations/solarpunk-city-2.svg'
 import { Button } from 'flowbite-react'
 import { useEffect, useState } from 'react'
 import fetchMeta from 'fetch-meta-tags'
-import Lottie from 'lottie-react'
+import Lottie from '@rookino/react-lottie-light'
 
 import GradientBorderCard from '../components/GradientBorderCard'
 
@@ -140,7 +140,7 @@ export default function Home({ posts }) {
           </p>
         </div>
       </div>
-      <Lottie animationData={HeroAnimation} loop={false} />
+      <Lottie options={{ animationData: HeroAnimation, loop: false }} />
 
       <div className="text-center flex flex-col justify-center">
         <BigTitle
