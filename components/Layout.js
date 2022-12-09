@@ -74,7 +74,7 @@ export default function Layout({ children }) {
           <div className="w-full">
             <div className="w-full sm:flex sm:items-center sm:justify-between">
               <div className="relative w-8 h-8">
-                <Image src="/icon-plain.svg" layout="fill" alt="Nation3 icon" />
+                <Image src="/icon-plain.svg" fill={true} alt="Nation3 icon" />
               </div>
               <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
                 <Footer.Icon href="https://n3.gg/discord" icon={FaDiscord} />

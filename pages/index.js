@@ -208,9 +208,9 @@ export default function Home({ posts }) {
                       alt=""
                     />
                     <div className="px-4 pb-4">
-                      <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                      <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                         {title}
-                      </h3>
+                      </h2>
                       <div className="font-normal text-gray-700 dark:text-gray-400">
                         {description}
                       </div>
