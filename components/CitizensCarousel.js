@@ -18,6 +18,52 @@ export default function CitizensCarousel() {
       pic: 'https://pbs.twimg.com/profile_images/1571949221506420741/3aRt9iud_400x400.jpg',
     },
     {
+      name: 'Brayton Williams',
+      role: 'Investor, BoostVC',
+      twitter: 'BraytonKey',
+      pic: 'https://pbs.twimg.com/profile_images/1572316594638041088/5C6ZHuKH_400x400.jpg',
+    },
+    {
+      name: 'Stefano Bernardi',
+      role: 'Investor, Unruly',
+      twitter: 'stefanobernardi',
+      pic: 'https://pbs.twimg.com/profile_images/1378384669671063554/SZX_so4j_400x400.jpg',
+    },
+    {
+      name: 'Anastasiya Belyaeva',
+      role: 'Contributor, Nation3',
+      twitter: 'anastasiyavc',
+      pic: '/anastasiya.jpg',
+    },
+    {
+      name: 'Jake Brukhman',
+      role: 'Founder, CoinFund',
+      twitter: 'jbrukh',
+      pic: 'https://pbs.twimg.com/profile_images/1583116442764976128/iQTvJdWR_400x400.jpg',
+    },
+    {
+      name: 'Luis Cuende',
+      role: 'Contributor, Nation3',
+      twitter: 'licuende',
+      pic: 'https://pbs.twimg.com/profile_images/1590314672640630784/SniHt1kT_400x400.jpg',
+    },
+    {
+      name: 'Luis Cuende',
+      role: 'Contributor, Nation3',
+      twitter: 'licuende',
+      pic: 'https://pbs.twimg.com/profile_images/1590314672640630784/SniHt1kT_400x400.jpg',
+    },
+  ]
+
+  /*
+
+  {
+      name: 'Paul Kohlhaas',
+      role: 'Founder, Molecule',
+      twitter: 'paulkhls',
+      pic: 'https://pbs.twimg.com/profile_images/1444995367146344454/3YJbxvwq_400x400.jpg',
+    },
+    {
       name: 'Alex Masmej',
       role: 'Founder, Showtime',
       twitter: 'AlexMasmej',
@@ -29,19 +75,8 @@ export default function CitizensCarousel() {
       twitter: 'santisiri',
       pic: 'https://pbs.twimg.com/profile_images/1511355749913481216/tDQSHYB0_400x400.png',
     },
-    {
-      name: 'Jake Brukhman',
-      role: 'Founder, CoinFund',
-      twitter: 'jbrukh',
-      pic: 'https://pbs.twimg.com/profile_images/1583116442764976128/iQTvJdWR_400x400.jpg',
-    },
-    {
-      name: 'Paul Kohlhaas',
-      role: 'Founder, Molecule',
-      twitter: 'paulkhls',
-      pic: 'https://pbs.twimg.com/profile_images/1444995367146344454/3YJbxvwq_400x400.jpg',
-    },
-  ]
+
+    */
 
   const cards = citizens.map(({ name, role, twitter, pic }, i) => {
     return (

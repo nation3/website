@@ -107,7 +107,7 @@ export default function Home({ posts }) {
         image="/social/home.png"
         type="website"
       />
-      <div className="w-full flex flex-row my-4 lg:mt-24 lg:mb-16 mx-auto items-center">
+      <div className="w-full flex flex-row mt-8 mb-4 lg:mt-24 lg:mb-16 mx-auto items-center">
         <div className="w-full flex flex-col justify-center items-center">
           <Image
             src={Headline}
@@ -161,10 +161,10 @@ export default function Home({ posts }) {
         <Image src={VideoBg} className="full-width -mt-36 -z-10" alt="" />
       </div>
 
-      <div className="flex flex-col mx-auto my-16 full-width">
-        <div className="text-center">
+      <div className="flex flex-col mx-auto my-8 lg:-mt-12 lg:my-16 full-width">
+        <div className="text-center px-4 md:px-0">
           <BigTitle text="Our thoughts" />
-          <p className="max-w-md m-auto mb-16 dark:text-white">
+          <p className="max-w-md m-auto mb-8 lg:mb-16 dark:text-white">
             Read about our journey creating a country on the Internet.
           </p>
           <Swiper
@@ -223,7 +223,7 @@ export default function Home({ posts }) {
         </div>
       </div>
       <div className="text-center -mx-16 px-16 xl:full-width xl:mx-0 xl:px-0 bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none">
-        <div className="bg-[url('/illustrations/constitution-bg.svg')] bg-right-bottom bg-no-repeat py-24">
+        <div className="bg-[url('/illustrations/constitution-bg.svg')] bg-right-bottom bg-no-repeat py-8 md:py-16">
           <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-16">
             <div className="lg:w-5/12 lg:text-left lg:py-16 ">
               <BigTitle gradientText="Become a citizen" />

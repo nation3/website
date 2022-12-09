@@ -128,7 +128,7 @@ export default function Jurisdiction() {
         />
       </div>
       <div className="bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] full-width my-16 lg:my-24 dark:bg-none px-4 xl:px-0">
-        <div className="max-w-screen-xl m-auto text-center py-32">
+        <div className="max-w-screen-xl m-auto text-center py-16 lg:py-32">
           <BigTitle gradientText="Sign up for launch phase whitelist" />
           <div className="max-w-md m-auto">
             <p className="m-auto mt-2 mb-8 dark:text-white">
