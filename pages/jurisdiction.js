@@ -18,6 +18,7 @@ import PickIcon from '../public/icons/jurisdiction/pick.svg'
 import AgreeIcon from '../public/icons/jurisdiction/agree.svg'
 import DisputeIcon from '../public/icons/jurisdiction/dispute.svg'
 import Button from '../components/Button'
+import LazyIframe from '../components/LazyIframe'
 
 const FeatureItem = ({ icon, title, description }) => {
   return (
@@ -82,11 +83,9 @@ export default function Jurisdiction() {
           </div>
           <div className="lg:w-7/12 lg:text-left w-full">
             <div className="relative aspect-video my-8 lg:my-16 shadow-xl rounded-xl border border-n3green dark:border-none">
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-xl"
-                src="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&mute=1&playlist=0GEulicKACw"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
+              <LazyIframe
+                url="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&controls=0&showinfo=0&mute=1&playlist=0GEulicKACw"
+                title="test"
               />
             </div>
           </div>
