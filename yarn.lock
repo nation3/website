@@ -5620,10 +5620,10 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
 
-fetch-meta-tags@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/fetch-meta-tags/-/fetch-meta-tags-1.0.10.tgz#4330736198fbdecd19f00b19fcc39c1b35988ead"
-  integrity sha512-4G/2rXugApTWb3X7d1nANInnvPHExE8WcAJ1KJAE20Vtdp/IsQprXciPNRajsXTF+ZiOFnqeqi6tO/dGVKwTmQ==
+fetch-meta-tags@1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/fetch-meta-tags/-/fetch-meta-tags-1.0.12.tgz#f553cb5f0725b9bccc039604f0a0e0a31e9d6e48"
+  integrity sha512-KG2RzlZVSGQsEC6xT3vNX05Dp1NXxyXICGJm38lGHp7kbey9qLWhChQOAJNOhoKYpKLIHs3QsXyPm9dAfSKIwA==
   dependencies:
     node-fetch "^3.0.0"
     node-html-parser "^5.0.0"

@@ -161,7 +161,7 @@ export default function Home({ posts }) {
         <Image src={VideoBg} className="full-width -mt-36 -z-10" alt="" />
       </div>
 
-      <div className="flex flex-col mx-auto my-16 px-8 lg:px-0 full-width">
+      <div className="flex flex-col mx-auto my-16 full-width">
         <div className="text-center">
           <BigTitle text="Our thoughts" />
           <p className="max-w-md m-auto mb-16 dark:text-white">
@@ -195,11 +195,11 @@ export default function Home({ posts }) {
           >
             {posts.map(({ title, image, url, description }, i) => (
               <SwiperSlide key={i}>
-                <div className="mb-12">
-                  <GradientBorderCard
-                    className="text-left flex flex-col justify-center align-items-center gap-4 shadow-xl"
-                    containerClassName="max-w-sm"
-                  >
+                <GradientBorderCard
+                  className="text-left shadow-xl overflow-hidden"
+                  containerClassName="max-w-sm flex place-self-stretch mb-12"
+                >
+                  <a target="_blank" rel="noreferrer noopener" href={url}>
                     <Image
                       src={image}
                       className="rounded-tl-2xl rounded-tr-2xl"
@@ -207,7 +207,7 @@ export default function Home({ posts }) {
                       height={190}
                       alt=""
                     />
-                    <div className="px-4 pb-4">
+                    <div className="p-4">
                       <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                         {title}
                       </h2>
@@ -215,8 +215,8 @@ export default function Home({ posts }) {
                         {description}
                       </div>
                     </div>
-                  </GradientBorderCard>
-                </div>
+                  </a>
+                </GradientBorderCard>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -275,7 +275,7 @@ of the world’s first internet-native jurisdiction"
 }
 
 export const getStaticProps = async () => {
-  /*const posts = await Promise.all(
+  const posts = await Promise.all(
     [
       'https://mirror.xyz/writings.nation3.eth/5Y2QNLOYWlkXL7RH8utRHqmx_6H430q-ADGi4ZuzbHo',
       'https://mirror.xyz/writings.nation3.eth/RUl_BPCU5bbbA2GB36ZZStmk4kLhlqzMO-PzRTIhHpw',
@@ -284,58 +284,7 @@ export const getStaticProps = async () => {
       'https://mirror.xyz/writings.nation3.eth/AOOXi_YLeQgTa1xSsjdgkym740uiKYpvNt2LhE9Neik',
       'https://mirror.xyz/writings.nation3.eth/hdCkkEWV17VHZyVtRpRnL11UsqpT9OzoicVVHueZftA',
     ].map((url) => fetchMeta(url))
-  )*/
-
-  const posts = [
-    {
-      title: 'The scope of a nation',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
-    },
-    {
-      title: "We don't really need taxes",
-      image:
-        'https://mirror-media.imgix.net/publication-images/8brzF7FrwZ8OUnJros5CU.png?height=1062&width=2124&h=1062&w=2124&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics ",
-    },
-    {
-      title: 'test',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics ",
-    },
-    {
-      title: 'test',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
-    },
-    {
-      title: 'test',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
-    },
-    {
-      title: 'test',
-      image:
-        'https://mirror-media.imgix.net/publication-images/fII0Qfaj-lASQJY2DLiJ4.png?height=915&width=1830&h=915&w=1830&auto=compress',
-      url: '',
-      description:
-        "What does a nation state really do? Today's nation states simultaneously do a lot and very little. They tend to be very paternalistic and constantly expand scope, all while failing to deliver on the basics  ",
-    },
-  ]
+  )
 
   return {
     props: {

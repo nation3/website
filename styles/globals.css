@@ -33,6 +33,18 @@ a {
   @apply bg-n3blue !important;
 }
 
+.swiper {
+  height: 100%;
+}
+.swiper-slide {
+  height: auto !important;
+  display: flex;
+}
+
+.swiper-content {
+  height: 100% !important
+  }
+
 @media (max-width: 600px) {
 
   /* fix the buttons positions */

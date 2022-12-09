@@ -11,7 +11,7 @@
     "@next/bundle-analyzer": "^13.0.6",
     "@rookino/react-lottie-light": "^2.0.5",
     "ethers": "^5.6.9",
-    "fetch-meta-tags": "^1.0.10",
+    "fetch-meta-tags": "1.0.12",
     "flowbite": "^1.5.1",
     "flowbite-react": "^0.1.5",
     "next": "^13.0.6",

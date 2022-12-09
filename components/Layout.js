@@ -86,7 +86,7 @@ export default function Layout({ children }) {
             <HomeItem className="md:hidden" withText={true} />
             <Navbar.Toggle />
             <Navbar.Collapse>
-              <div className="grid grid-cols-1 md:grid-cols-5 place-items-end md:place-items-center gap-x-16 gap-y-2 text-2xl md:text-lg font-normal">
+              <div className="grid grid-cols-1 md:grid-cols-5 place-items-end md:place-items-center gap-x-16 gap-y-2 text-2xl md:text-lg font-normal dark:text-white">
                 <NavigationItem href="/manifesto" currentPath={path}>
                   Manifesto
                 </NavigationItem>
