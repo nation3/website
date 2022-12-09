@@ -10,7 +10,7 @@ const components = {
 
 export default function FAQ({ serialized }) {
   return (
-    <>
+    <div className="max-w-screen-md mx-auto">
       <Head
         title="FAQ"
         description="Frequently asked questions about Nation3, a sovereign nation on the cloud."
@@ -24,7 +24,7 @@ export default function FAQ({ serialized }) {
       <div className="prose prose-lg prose-h2:font-display prose-h2:font-normal prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-2 prose-a:text-n3blue prose-li:my-0 dark:prose-invert">
         <MDXRemote {...serialized} components={components} />
       </div>
-    </>
+    </div>
   )
 }
 
