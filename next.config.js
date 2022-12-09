@@ -8,4 +8,13 @@ module.exports = {
 
     return config
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'pbs.twimg.com',
+        pathname: '/profile_images/**',
+      },
+    ],
+  },
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import BigTitle from '../components/BigTitle'
 import InfiniteCarousel from '../components/InfiniteCarousel'
 import GradientBorderCard from '../components/GradientBorderCard'
@@ -56,8 +57,10 @@ export default function CitizensCarousel() {
         >
           <div className="flex flex-row justify-center align-items-center">
             <div className="relative w-16 h-16">
-              <img
+              <Image
                 src={pic}
+                width={64}
+                height={64}
                 className="w-16 h-16 m-auto rounded-full absolute z-0 grayscale sepia contrast-100 saturate-200 brightness-125"
               />
               <div className="bg-gradient-to-b from-n3blue to-n3green opacity-75 absolute top-0 right-0 bottom-0 left-0 z-10 rounded-full"></div>
