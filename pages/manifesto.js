@@ -25,7 +25,7 @@ export default function Manifesto() {
         gradientText="It's time to re-invent the nation state"
       />
       <div className="my-16">
-        <Image src={Manifesto1}></Image>
+        <Image src={Manifesto1} alt="" priority></Image>
       </div>
       <div className="max-w-2xl m-auto my-8">
         <p className="md:-mx-1 mb-8">
@@ -64,7 +64,7 @@ export default function Manifesto() {
         </p>
       </div>
       <div className="max-w-4xl m-auto pl-6">
-        <Image src={Manifesto2}></Image>
+        <Image src={Manifesto2} alt=""></Image>
       </div>
       <div className="max-w-2xl m-auto mt-4 mb-8">
         <p className="md:-mx-1">
@@ -169,7 +169,7 @@ export default function Manifesto() {
         <span className="border-b-4 border-n3green">build them</span>.
       </h1>
       <div className="mt-16 mb-24 md:my-0 md:-mx-16 md:-mt-48 overflow-hidden">
-        <Image src={Manifesto5}></Image>
+        <Image src={Manifesto5} alt=""></Image>
       </div>
 
       <div className="max-w-2xl text-2xl m-auto -mt-16 mb-8">
@@ -252,7 +252,7 @@ export default function Manifesto() {
         Web3 is here, and for the first time in history, the Internet will
         determine the structure of our society.
       </h1>
-      <Image src={Manifesto6}></Image>
+      <Image src={Manifesto6} alt=""></Image>
       <div className="max-w-2xl m-auto my-6 md:my-16 font-light">
         <div className="md:-mx-1">
           <h3 className="text-lg md:text-xl">Rebuilding nations with Web3</h3>
@@ -313,17 +313,17 @@ export default function Manifesto() {
       </div>
       <div className="flex grid grid-cols-1 sm:grid-cols-3 gap-8 mt-16">
         <div className="bg-zinc-50 p-8 dark:bg-gray-700">
-          <Image src={Nation1Icon} width={74} height={74}></Image>
+          <Image src={Nation1Icon} width={74} height={74} alt=""></Image>
           <h4 className="text-lg text-gray-400 mt-16">Nation1</h4>
           <h4 className="text-3xl font-light">Arbitrary Dictatorship</h4>
         </div>
         <div className="bg-zinc-50 p-8 dark:bg-gray-700">
-          <Image src={Nation2Icon} width={74} height={74}></Image>
+          <Image src={Nation2Icon} width={74} height={74} alt=""></Image>
           <h4 className="text-lg text-gray-400 mt-16">Nation2</h4>
           <h4 className="text-3xl font-light">Monolithic Democracy</h4>
         </div>
         <div className="bg-gradient-to-r from-n3blue/10 via-n3green/10 to-n3green/10 p-8">
-          <Image src={Nation3Icon} width={74} height={74}></Image>
+          <Image src={Nation3Icon} width={74} height={74} alt=""></Image>
           <h4 className="text-lg text-n3blue mt-16">Nation3</h4>
           <h4 className="text-3xl font-light">
             Mesh of Crypto-powered Communities
@@ -353,7 +353,7 @@ export default function Manifesto() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image src={TwitterIcon} width={56} height={56} />
+            <Image src={TwitterIcon} width={56} height={56} alt="" />
           </a>
         </div>
       </div>

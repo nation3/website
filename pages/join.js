@@ -24,7 +24,7 @@ const CarouselItem = ({ children, image }) => (
     <div className="lg:basis-4/6 lg:block">{children}</div>
     <div className="basis-2/6 hidden lg:block flex h-full">
       <div className="relative h-full rounded-full overflow-hidden">
-        <Image src={image} layout="fill" objectFit="contain" />
+        <Image src={image} fill={true} alt="" />
       </div>
     </div>
   </div>

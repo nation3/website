@@ -23,7 +23,7 @@ import LazyIframe from '../components/LazyIframe'
 const FeatureItem = ({ icon, title, description }) => {
   return (
     <div className="flex flex-col relative items-stretch">
-      <Image src={icon} height={230} />
+      <Image src={icon} height={230} alt="" />
       <h2 className="font-display text-2xl my-2">{title}</h2>
       <p className="text-lg">{description}</p>
     </div>
@@ -33,7 +33,11 @@ const FeatureItem = ({ icon, title, description }) => {
 const ListItem = ({ icon, children }) => {
   return (
     <li className="flex items-top my-4 gap-4">
-      <Image src={icon} className="w-6 h-6 text-gray-400 flex-shrink-0" />
+      <Image
+        src={icon}
+        className="w-6 h-6 text-gray-400 flex-shrink-0"
+        alt=""
+      />
       {children}
     </li>
   )
@@ -167,7 +171,7 @@ export default function Jurisdiction() {
                       zIndex: 10,
                     }}
                   >
-                    <Image src={Constitution} fill={true} />
+                    <Image src={Constitution} fill={true} alt="" />
                   </Card>
                 </div>
                 <div className="z-0">
@@ -180,13 +184,17 @@ export default function Jurisdiction() {
                       zIndex: 0,
                     }}
                   >
-                    <Image src={ConstitutionText} fill={true} />
+                    <Image src={ConstitutionText} fill={true} alt="" />
                   </Card>
                 </div>
               </div>
             </div>
             <div className="lg:hidden flex justify-center py-8">
-              <Image src={Constitution} className="shadow-xl rounded-xl" />
+              <Image
+                src={Constitution}
+                className="shadow-xl rounded-xl"
+                alt=""
+              />
             </div>
             <GradientLink text="Read the Nation3 Constitution" href={''} />
           </div>

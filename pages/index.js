@@ -109,13 +109,30 @@ export default function Home({ posts }) {
       />
       <div className="w-full flex flex-row my-4 lg:mt-24 lg:mb-16 mx-auto items-center">
         <div className="w-full flex flex-col justify-center items-center">
-          <Image src={Headline} className="block lg:hidden dark:hidden" />
+          <Image
+            src={Headline}
+            className="block lg:hidden dark:hidden"
+            priority
+            alt="A new nation state on the cloud"
+          />
           <Image
             src={HeadlineDark}
             className="hidden lg:hidden dark:block lg:dark:hidden"
+            priority
+            alt="A new nation state on the cloud"
           />
-          <Image src={HeadlineLG} className="hidden lg:block dark:hidden" />
-          <Image src={HeadlineDarkLG} className="hidden lg:dark:block" />
+          <Image
+            src={HeadlineLG}
+            className="hidden lg:block dark:hidden"
+            priority
+            alt="A new nation state on the cloud"
+          />
+          <Image
+            src={HeadlineDarkLG}
+            className="hidden lg:dark:block"
+            priority
+            alt="A new nation state on the cloud"
+          />
 
           <p className="max-w-md text-lg text-center dark:text-white">
             Online-first, zero-tax nation with its own jurisdiction, court and
@@ -141,7 +158,7 @@ export default function Home({ posts }) {
             title="test"
           />
         </div>
-        <Image src={VideoBg} className="full-width -mt-36 -z-10" />
+        <Image src={VideoBg} className="full-width -mt-36 -z-10" alt="" />
       </div>
 
       <div className="flex flex-col mx-auto my-16 px-8 lg:px-0 full-width">
@@ -188,11 +205,12 @@ export default function Home({ posts }) {
                       className="rounded-tl-2xl rounded-tr-2xl"
                       width={380}
                       height={190}
+                      alt=""
                     />
                     <div className="px-4 pb-4">
-                      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                      <h3 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                         {title}
-                      </h5>
+                      </h3>
                       <div className="font-normal text-gray-700 dark:text-gray-400">
                         {description}
                       </div>
@@ -227,21 +245,30 @@ of the world’s first internet-native jurisdiction"
                     zIndex: 10,
                   }}
                 >
-                  <Image src={Constitution} fill={true} />
+                  <Image src={Constitution} fill={true} alt="" />
                 </Card>
               </div>
               <div className="hidden lg:block absolute -right-4 top-20 mt-2 -z-10">
-                <Image src={ConstitutionText} className="z-0" height={490} />
+                <Image
+                  src={ConstitutionText}
+                  className="z-0"
+                  height={490}
+                  alt=""
+                />
               </div>
             </div>
             <div className="lg:hidden flex justify-center">
-              <Image src={Constitution} className="shadow-xl rounded-xl" />
+              <Image
+                src={Constitution}
+                className="shadow-xl rounded-xl"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </div>
       <CitizensCarousel />
-      <Image src={SolarpunkCity2} />
+      <Image src={SolarpunkCity2} alt="" />
       <BePart />
     </div>
   )
