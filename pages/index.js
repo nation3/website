@@ -30,6 +30,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import CitizensCarousel from '../components/CitizensCarousel'
 import BePart from '../components/BePart'
+import LazyIframe from '../components/LazyIframe'
 
 export default function Home({ posts }) {
   const [width, setWidth] = useState(0)
@@ -135,11 +136,9 @@ export default function Home({ posts }) {
           bureaucracy.
         </p>
         <div className="relative aspect-video my-8 lg:my-16 shadow-xl rounded-xl">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full rounded-xl"
-            src="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&amp;controls=0&amp;showinfo=0&mute=1&playlist=0GEulicKACw"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+          <LazyIframe
+            url="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&controls=0&showinfo=0&mute=1&playlist=0GEulicKACw&autoplay=1"
+            title="test"
           />
         </div>
         <Image src={VideoBg} className="full-width -mt-36 -z-10" />
