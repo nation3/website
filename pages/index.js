@@ -184,9 +184,11 @@ export default function Home({ posts }) {
                     className="text-left flex flex-col justify-center align-items-center gap-4 shadow-xl"
                     containerClassName="max-w-sm"
                   >
-                    <img
+                    <Image
                       src={image}
                       className="rounded-tl-2xl rounded-tr-2xl"
+                      width={380}
+                      height={190}
                     />
                     <div className="px-4 pb-4">
                       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">

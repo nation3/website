@@ -15,6 +15,11 @@ module.exports = {
         hostname: 'pbs.twimg.com',
         pathname: '/profile_images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'mirror-media.imgix.net',
+        pathname: '/publication-images/**',
+      },
     ],
   },
 }
