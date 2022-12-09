@@ -1,11 +1,15 @@
-import { useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { useInView } from 'react-intersection-observer'
 
 const LazyIframe = ({ url, title }) => {
+  const [loaded, setLoaded] = useState(false)
   const { ref, inView, entry } = useInView({
     /* Optional options */
     threshold: 0,
   })
+  useEffect(() => {
+    inView && setLoaded(true)
+  }, [inView])
 
   return (
     <div
@@ -17,7 +21,7 @@ const LazyIframe = ({ url, title }) => {
       }}
       ref={ref}
     >
-      {inView && (
+      {loaded && (
         <iframe
           title={title}
           style={{
