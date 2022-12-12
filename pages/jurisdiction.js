@@ -32,7 +32,7 @@ const FeatureItem = ({ icon, title, description }) => {
 
 const ListItem = ({ icon, children }) => {
   return (
-    <li className="flex items-top my-4 gap-4">
+    <li className="flex items-top my-4 gap-6">
       <Image
         src={icon}
         className="w-6 h-6 text-gray-400 flex-shrink-0"
@@ -46,11 +46,12 @@ const ListItem = ({ icon, children }) => {
 export default function Jurisdiction() {
   return (
     <div className="dark:text-white">
-      <div className="bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] full-width dark:bg-none">
+      <div className="bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none full-width">
         <div className="max-w-screen-xl m-auto text-center py-32 bg-[url('/ellipse-bg.svg')] bg-bottom bg-no-repeat dark:bg-none">
           <BigTitle
             text="The world's first"
             gradientText="Internet-native jurisdiction"
+            sizeClasses="text-4xl md:text-5xl lg:text-6xl"
           />
           <p className="max-w-md m-auto mt-4 px-4 dark:text-white">
             Enter agreements. As easy as tweeting.
@@ -58,17 +59,19 @@ export default function Jurisdiction() {
         </div>
       </div>
       <div className="text-center mt-16 lg:mt-24">
-        <h1 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl font-display dark:text-white lg:leading-tight inline">
-          Are you a{' '}
-        </h1>
-        <h1 className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text font-display mt-1 lg:leading-tight inline">
-          DAO
-        </h1>
-        <h1 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl font-display dark:text-white lg:leading-tight inline">
-          ?
-        </h1>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl font-display dark:text-white lg:leading-tight inline">
+            Are you a{' '}
+          </h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-n3blue via-n3green to-n3green text-transparent bg-clip-text font-display mt-1 lg:leading-tight inline">
+            DAO, DAO contributor or an online company
+          </h1>
+          <h1 className="text-3xl text-gray-900 md:text-4xl lg:text-5xl font-display dark:text-white lg:leading-tight inline">
+            ?
+          </h1>
+        </div>
         <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-x-24 items-center mt-8 mb-16">
-          <div className="lg:w-5/12 text-left text-xl">
+          <div className="lg:w-5/12 text-left text-lg">
             <p>
               Leave bureaucracy behind. Easily enter into agreements backed by
               Nation3 — the Internet’s first sovereign jurisdiction.
@@ -127,12 +130,12 @@ export default function Jurisdiction() {
           description="In case of dispute, all communications between the parties and the judges are end-to-end encrypted. And, by law, all evidence must remain private."
         />
       </div>
-      <div className="bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] full-width my-16 lg:my-24 dark:bg-none px-4 xl:px-0">
+      <div className="bg-gradient-to-r from-[#EAFFF4] to-[#EEF9FF] full-width my-16 lg:my-24 dark:bg-none px-4 xl:px-0">
         <div className="max-w-screen-xl m-auto text-center py-16 lg:py-32">
           <BigTitle gradientText="Sign up for launch phase whitelist" />
           <div className="max-w-md m-auto">
             <p className="m-auto mt-2 mb-8 dark:text-white">
-              No fees for 6 months.
+              To be the first to experience a 21st-century jurisdiction.
             </p>
             <div className="flex items-end mb-3">
               <div className="relative w-full mr-3 revue-form-group">
@@ -159,7 +162,7 @@ export default function Jurisdiction() {
               <BigTitle text="and have a say in the Constitution" />
               <p>of the world’s first internet-native jurisdiction</p>
             </div>
-            <div className="bg-[url('/ellipse-bg-circle.svg')] bg-top bg-no-repeat hidden lg:block">
+            <div className="bg-[url('/ellipse-bg-circle.svg')] bg-top bg-no-repeat pt-8 -mt-8 hidden lg:block">
               <div className="grid grid-cols-2 justify-items-center items-center relative max-w-3xl py-16 bg-[url('/ellipse-bg-circle.svg')] bg-bottom bg-no-repeat">
                 <div className="z-10">
                   <Card

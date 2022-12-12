@@ -1,5 +1,5 @@
 import BigTitle from '../components/BigTitle'
-import { Button } from 'flowbite-react'
+import Button from '../components/Button'
 
 export default function BePart() {
   return (
@@ -9,7 +9,7 @@ export default function BePart() {
         Online-first, zero-tax nation with its own jurisdiction, court and
         system of law.
       </p>
-      <Button color="primary">Become a citizen</Button>
+      <Button href="/join#carousel">Become a citizen</Button>
     </div>
   )
 }

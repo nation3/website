@@ -59,8 +59,8 @@ const HomeItem = ({ withText, className }) => {
     >
       <Image
         src={Icon}
-        width={50}
-        height={50}
+        width={64}
+        height={64}
         alt="Nation3 logo"
         className="cursor-pointer transition rounded-full shadow-md hover:scale-95 hover:opacity-80"
       />
@@ -86,7 +86,7 @@ export default function Layout({ children }) {
             <HomeItem className="md:hidden" withText={true} />
             <Navbar.Toggle />
             <Navbar.Collapse>
-              <div className="grid grid-cols-1 md:grid-cols-5 place-items-end md:place-items-center gap-x-16 gap-y-2 text-2xl md:text-lg font-normal dark:text-white">
+              <div className="grid grid-cols-1 md:grid-cols-5 place-items-end md:place-items-center gap-x-16 gap-y-2 text-2xl md:text-[16px] font-normal dark:text-white">
                 <NavigationItem href="/manifesto" currentPath={path}>
                   Manifesto
                 </NavigationItem>
@@ -94,7 +94,6 @@ export default function Layout({ children }) {
                   Jurisdiction
                 </NavigationItem>
                 <HomeItem className="hidden md:block" />
-
                 <NavigationItem href="/token" currentPath={path}>
                   $NATION
                 </NavigationItem>
@@ -106,9 +105,16 @@ export default function Layout({ children }) {
           </Navbar>
         </div>
         {children}
-        <footer className="py-6 mt-16 flex justify-between max-w-screen-md mx-auto">
+        <footer className="py-6 mt-16 flex justify-between max-w-screen-lg mx-auto">
           <div className="w-full">
-            <div className="w-full sm:flex sm:items-center sm:justify-between">
+            <div className="w-full flex items-center justify-center gap-16">
+              <div className="mt-4 flex space-x-6 mt-0 justify-center">
+                <FooterItem href="https://n3.gg/discord" icon={FaDiscord} />
+                <FooterItem
+                  href="https://forum.nation3.org"
+                  icon={FaDiscourse}
+                />
+              </div>
               <div className="relative w-8 h-8">
                 <Link href="/" passHref>
                   <Image
@@ -119,13 +125,8 @@ export default function Layout({ children }) {
                   />
                 </Link>
               </div>
-              <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                <FooterItem href="https://n3.gg/discord" icon={FaDiscord} />
-                <FooterItem
-                  href="https://forum.nation3.org"
-                  icon={FaDiscourse}
-                />
-                <FooterItem href="https://gov.nation3.org" icon={FaVoteYea} />
+              <div className="mt-4 flex space-x-6 mt-0 justify-center">
+                {/*<FooterItem href="https://gov.nation3.org" icon={FaVoteYea} />*/}
                 <FooterItem href="https://github.com/nation3" icon={FaGithub} />
                 <FooterItem href="https://wiki.nation3.org" icon={FaBookOpen} />
               </div>

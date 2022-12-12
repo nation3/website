@@ -48,10 +48,10 @@ export default function CitizensCarousel() {
       pic: 'https://pbs.twimg.com/profile_images/1590314672640630784/SniHt1kT_400x400.jpg',
     },
     {
-      name: 'Luis Cuende',
-      role: 'Contributor, Nation3',
-      twitter: 'licuende',
-      pic: 'https://pbs.twimg.com/profile_images/1590314672640630784/SniHt1kT_400x400.jpg',
+      name: 'Alex Masmej',
+      role: 'Founder, Showtime',
+      twitter: 'AlexMasmej',
+      pic: 'https://pbs.twimg.com/profile_images/1585481031653564422/nuPwlIQ1_400x400.jpg',
     },
   ]
 
@@ -62,12 +62,6 @@ export default function CitizensCarousel() {
       role: 'Founder, Molecule',
       twitter: 'paulkhls',
       pic: 'https://pbs.twimg.com/profile_images/1444995367146344454/3YJbxvwq_400x400.jpg',
-    },
-    {
-      name: 'Alex Masmej',
-      role: 'Founder, Showtime',
-      twitter: 'AlexMasmej',
-      pic: 'https://pbs.twimg.com/profile_images/1585481031653564422/nuPwlIQ1_400x400.jpg',
     },
     {
       name: 'Santi Siri',
@@ -91,7 +85,7 @@ export default function CitizensCarousel() {
           href={`https://twitter.com/${twitter}`}
         >
           <div className="flex flex-row justify-center align-items-center">
-            <div className="relative w-16 h-16">
+            <div className="relative w-16 h-16 mb-4">
               <Image
                 src={pic}
                 width={64}
@@ -102,8 +96,8 @@ export default function CitizensCarousel() {
               <div className="bg-gradient-to-b from-n3blue to-n3green opacity-75 absolute top-0 right-0 bottom-0 left-0 z-10 rounded-full"></div>
             </div>
           </div>
-          <p className="font-medium text-xl dark:text-white">{name}</p>
-          <p className="text-n3blue text-xl">{role}</p>
+          <p className="font-medium text-lg dark:text-white">{name}</p>
+          <p className="text-n3blue text-lg">{role}</p>
         </a>
       </GradientBorderCard>
     )

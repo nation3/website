@@ -14,8 +14,7 @@ import SolarpunkCity from '../public/illustrations/solarpunk-city.svg'
 import Constitution from '../public/illustrations/constitution.svg'
 import ConstitutionText from '../public/illustrations/constitution-text.svg'
 import SolarpunkCity2 from '../public/illustrations/solarpunk-city-2.svg'
-import { Button } from 'flowbite-react'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import fetchMeta from 'fetch-meta-tags'
 import Lottie from '@rookino/react-lottie-light'
 
@@ -31,6 +30,9 @@ import 'swiper/css/navigation'
 import CitizensCarousel from '../components/CitizensCarousel'
 import BePart from '../components/BePart'
 import LazyIframe from '../components/LazyIframe'
+
+import PrevIcon from '../public/icons/prev.svg'
+import NextIcon from '../public/icons/prev.svg'
 
 export default function Home({ posts }) {
   const [width, setWidth] = useState(0)
@@ -99,6 +101,18 @@ export default function Home({ posts }) {
     },
   ]
 
+  const [swiperRef, setSwiperRef] = useState()
+
+  const handleLeftClick = useCallback(() => {
+    if (!swiperRef) return
+    swiperRef.slidePrev()
+  }, [swiperRef])
+
+  const handleRightClick = useCallback(() => {
+    if (!swiperRef) return
+    swiperRef.slideNext()
+  }, [swiperRef])
+
   return (
     <div>
       <Head
@@ -107,7 +121,7 @@ export default function Home({ posts }) {
         image="/social/home.png"
         type="website"
       />
-      <div className="w-full flex flex-row mt-8 mb-4 lg:mt-24 lg:mb-16 mx-auto items-center">
+      <div className="w-full flex flex-row mt-8 mb-4 lg:mt-28 lg:mb-16 mx-auto items-center">
         <div className="w-full flex flex-col justify-center items-center">
           <Image
             src={Headline}
@@ -134,7 +148,7 @@ export default function Home({ posts }) {
             alt="A new nation state on the cloud"
           />
 
-          <p className="max-w-md text-lg text-center dark:text-white">
+          <p className="max-w-md text-lg text-center dark:text-white my-2">
             Online-first, zero-tax nation with its own jurisdiction, court and
             system of law.
           </p>
@@ -142,7 +156,7 @@ export default function Home({ posts }) {
       </div>
       <Lottie options={{ animationData: HeroAnimation, loop: false }} />
 
-      <div className="text-center flex flex-col justify-center">
+      <div className="text-center flex flex-col justify-center lg:mb-0">
         <BigTitle
           text="The world's first"
           gradientText="Internet-native jurisdiction"
@@ -158,18 +172,21 @@ export default function Home({ posts }) {
             title="test"
           />
         </div>
-        <Image src={VideoBg} className="full-width -mt-36 -z-10" alt="" />
+        <Image
+          src={VideoBg}
+          className="full-width hidden lg:block lg:-mt-36 -z-10"
+          alt=""
+        />
       </div>
 
-      <div className="flex flex-col mx-auto my-8 lg:-mt-12 lg:my-16 full-width">
-        <div className="text-center px-4 md:px-0">
+      <div className="flex flex-col mx-auto -mx-8 lg:px-12 my-8 lg:-mt-12 lg:my-16 lg:full-width">
+        <div className="text-center">
           <BigTitle text="Our thoughts" />
-          <p className="max-w-md m-auto mb-8 lg:mb-16 dark:text-white">
+          <p className="max-w-md m-auto mb-8 px-4 lg:mb-16 dark:text-white">
             Read about our journey creating a country on the Internet.
           </p>
           <Swiper
             pagination={true}
-            navigation={true}
             spaceBetween={16}
             breakpoints={{
               640: {
@@ -192,6 +209,7 @@ export default function Home({ posts }) {
             keyboard={{
               enabled: true,
             }}
+            navigation={true}
           >
             {posts.map(({ title, image, url, description }, i) => (
               <SwiperSlide key={i}>
@@ -219,10 +237,10 @@ export default function Home({ posts }) {
                 </GradientBorderCard>
               </SwiperSlide>
             ))}
-          </Swiper>
+          </Swiper>{' '}
         </div>
       </div>
-      <div className="text-center -mx-16 px-16 xl:full-width xl:mx-0 xl:px-0 bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none">
+      <div className="text-center -mx-8 px-8 xl:full-width xl:mx-0 xl:px-0 bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none">
         <div className="bg-[url('/illustrations/constitution-bg.svg')] bg-right-bottom bg-no-repeat py-8 md:py-16">
           <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-16">
             <div className="lg:w-5/12 lg:text-left lg:py-16 ">
@@ -231,7 +249,11 @@ export default function Home({ posts }) {
                 text="and have a say in the Constitution
 of the world’s first internet-native jurisdiction"
               />
-              <GradientLink text="Read the Nation3 Constitution" href={''} />
+              <GradientLink
+                text="Read the Nation3 Constitution"
+                href={''}
+                className="block mt-4"
+              />
             </div>
 
             <div className="hidden lg:block lg:w-7/12 flex flex-row relative z-0">
