@@ -30,86 +30,8 @@ import BePart from '../components/BePart'
 import LazyIframe from '../components/LazyIframe'
 
 export default function Home({ posts }) {
-  const [width, setWidth] = useState(0)
-
-  useEffect(() => {
-    window.addEventListener('resize', () => setWidth(window.innerWidth))
-    setWidth(window.innerWidth)
-  }, [])
-
-  let carouselItems = [
-    {
-      text: `
-      # 1.
-      ## Join the community
-      You read [the manifesto](/manifesto), it clicked.
-
-      You are fed up with the way traditional states run the show. You see your taxes go nowhere. Now what?
-
-      Now you can contribute to building a Web3-powered,
-      tax-free, inclusive community that aims to build [solarpunk](https://en.wikipedia.org/wiki/Solarpunk) society you’ll
-      want to live in.
-
-      - $NATION is your entry point into the ecosystem. You can [buy some here](https://app.balancer.fi/#/trade/ether/0x333A4823466879eeF910A04D473505da62142069), or earn it by completing [open tasks on Dework](https://app.dework.xyz/nation3/board)
-      - Head over to [Discord](https://n3.gg/discord) and introduce yourself to the community
-      - Majority of tasks and discussion channels are token-gated to citizens 
-      (pro tip: you’d want to get at least 2 $NATION)`,
-      image: '/icons/nation3.svg',
-    },
-    {
-      text: `
-      # 2.a.
-      ## Become a Genesis Citizen
-      You can now become a Genesis Citizen of an emerging, rapidly growing tech nation. You can claim your passport out of only 420 to ever be minted.
-
-      ### Why would you want to be a citizen?
-      
-      - Have a say in the direction we take as a nation
-      - Participate in the internal economy, including paid work and the upcoming UBI
-      - Access all citizen-only spaces online and offline
-      - Propose your own projects and get funding
-      - Benefit from all Nation3 services being built now and in the future, such as the Court and insurance circles
-      - As a Genesis Citizen, get priority access to any physical locations in Nation3`,
-      image: '/icons/world.svg',
-    },
-    {
-      text: `
-      # 2.b.
-      ## Become a Genesis Citizen
-      ### Ready to grab your passport?
-
-      - [Lock up](https://app.nation3.org/lock) your $NATION to obtain more than 2 $veNATION* - your skin-in-the-state. Whenever your lock expires, the underlying $NATION is yours to keep, sell, or re-lock
-      - While we’re devising a social vouching mechanism to ensure Nation3 is inclusive to everyone regardless of their financial background, you can still get verified on [Discord](https://n3.gg/discord) and get access to [Dework tasks](https://app.dework.xyz/nation3/board) with a minimum balance of 0.1 $veNATION. You can earn the rest you need for a passport by completing paid tasks`,
-      image: '/join/passport.svg',
-    },
-    {
-      text: `
-      # 3.
-      ## Start contributing
-      You are now one of the handful of visionary individuals to anticipate the rise of cloud nations and [network states](https://thenetworkstate.com) - and you can contribute to shaping it in a way that preserves our tomorrow: 
-
-      - Participate in governance, following our new [Governance Standard](https://github.com/nation3/gov/blob/main/GOVERNANCE.md)
-      - Propose your own projects that advance the [Nation3 stack](https://www.figma.com/file/tbvWJ8S962j1hHJJfaCOMK/Nation3---Cloud-Nation-Ecosystem?node-id=439%3A1262), and get funding from the DAO
-      - Contribute to current [open tasks on Dework](https://app.dework.xyz/nation3/board)
-      - Join Social Circles and other community events (as announced on Discord)`,
-      image: '/icons/people.svg',
-    },
-  ]
-
-  const [swiperRef, setSwiperRef] = useState()
-
-  const handleLeftClick = useCallback(() => {
-    if (!swiperRef) return
-    swiperRef.slidePrev()
-  }, [swiperRef])
-
-  const handleRightClick = useCallback(() => {
-    if (!swiperRef) return
-    swiperRef.slideNext()
-  }, [swiperRef])
-
   return (
-    <div>
+    <div className="home">
       <Head
         title=""
         description="Sovereign cloud nation. Building a community of like-minded people creating a nation on the cloud."
