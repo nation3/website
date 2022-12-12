@@ -46,6 +46,12 @@ const ListItem = ({ icon, children }) => {
 export default function Jurisdiction() {
   return (
     <div className="dark:text-white">
+      <Head
+        title="Jurisdiction"
+        description="Sovereign cloud nation. Building a community of like-minded people creating a nation on the cloud."
+        image="/social/home.png"
+        type="website"
+      />
       <div className="bg-gradient-to-r from-[#EEF9FF] to-[#EAFFF4] dark:bg-none full-width">
         <div className="max-w-screen-xl m-auto text-center py-32 bg-[url('/ellipse-bg.svg')] bg-bottom bg-no-repeat dark:bg-none">
           <BigTitle

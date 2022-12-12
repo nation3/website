@@ -83,12 +83,17 @@ export default function Home({ posts }) {
           the Internet, without resorting to traditional countries and endless
           bureaucracy.
         </p>
-        <div className="relative aspect-video my-8 lg:my-16 shadow-xl rounded-xl">
+        <div className="relative aspect-video mt-8 lg:mt-16 shadow-xl rounded-xl">
           <LazyIframe
             url="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&controls=0&showinfo=0&mute=1&playlist=0GEulicKACw&autoplay=1"
             title="test"
           />
         </div>
+        <GradientLink
+          text="Read more"
+          href="/jurisdiction"
+          className="mt-4 lg:mt-8 mb-8 lg:mb-16"
+        />
         <Image
           src={VideoBg}
           className="full-width hidden lg:block lg:-mt-36 -z-10"
@@ -162,10 +167,7 @@ export default function Home({ posts }) {
           <div className="max-w-screen-xl m-auto flex flex-col lg:flex-row align-items-center gap-16">
             <div className="lg:w-5/12 lg:text-left lg:py-16 ">
               <BigTitle gradientText="Become a citizen" />
-              <BigTitle
-                text="and have a say in the Constitution
-of the world’s first internet-native jurisdiction"
-              />
+              <BigTitle text="and have a say in the Constitution of the world’s first internet-native jurisdiction" />
               <GradientLink
                 text="Read the Nation3 Constitution"
                 href={''}
