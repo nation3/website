@@ -194,7 +194,14 @@ export default function Jurisdiction() {
                 alt=""
               />
             </div>
-            <GradientLink text="Read the Nation3 Constitution" href={''} />
+            <GradientLink
+              text="Read the Nation3 Constitution"
+              href="https://linked.md/v?u=https://linked.md/api/github/nation3/law/main/Constitution.linked.md"
+            />{' '}
+            <GradientLink
+              text="Provide feedback and ideas"
+              href="https://nation3.kampsite.co"
+            />
           </div>
         </div>
       </div>

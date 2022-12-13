@@ -165,7 +165,7 @@ export default function Home({ posts }) {
               <BigTitle text="and have a say in the Constitution of the world’s first internet-native jurisdiction" />
               <GradientLink
                 text="Read the Nation3 Constitution"
-                href={''}
+                href="https://linked.md/v?u=https://linked.md/api/github/nation3/law/main/Constitution.linked.md"
                 className="block mt-4"
               />
             </div>
