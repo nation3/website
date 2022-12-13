@@ -13,17 +13,11 @@ import {
 } from 'react-icons/fa'
 import Icon from '../public/icon.svg'
 import Announcement from './Announcement'
-
-const navigation = [
-  { name: 'Manifesto', href: '/manifesto' },
-  { name: '$NATION', href: '/token' },
-  { name: 'FAQ', href: '/faq' },
-  { name: 'Citizen app', href: 'https://app.nation3.org' },
-]
+import UniversalLink from './UniversalLink'
 
 const NavigationItem = ({ children, href, currentPath }) => {
   return (
-    <Link
+    <UniversalLink
       href={href}
       className={`cursor-pointer transition hover:scale-95 ${
         currentPath === href.split('#')[0]
@@ -32,7 +26,7 @@ const NavigationItem = ({ children, href, currentPath }) => {
       }`}
     >
       {children}
-    </Link>
+    </UniversalLink>
   )
 }
 
@@ -88,8 +82,8 @@ export default function Layout({ children }) {
                   Jurisdiction
                 </NavigationItem>
                 <HomeItem className="hidden md:block" />
-                <NavigationItem href="/token" currentPath={path}>
-                  $NATION
+                <NavigationItem href="https://app.nation3.org">
+                  Citizen app
                 </NavigationItem>
                 <NavigationItem href="/faq" currentPath={path}>
                   FAQ
