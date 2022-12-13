@@ -1,7 +1,7 @@
-import '../styles/globals.css'
-import Layout from '../components/Layout'
 import { Flowbite } from 'flowbite-react'
 import { useState, useEffect } from 'react'
+import Layout from '../components/Layout'
+import '../styles/globals.css'
 
 function Nation3Website({ Component, pageProps }) {
   const [darkMode, setDarkMode] = useState(false)

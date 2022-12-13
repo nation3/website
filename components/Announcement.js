@@ -1,6 +1,6 @@
 import { ExternalLinkIcon, XIcon } from '@heroicons/react/outline'
-import { useState, useEffect } from 'react'
 import { Toast } from 'flowbite-react'
+import { useState, useEffect } from 'react'
 
 export default function Announcement() {
   const [closed, setClosed] = useState(false)

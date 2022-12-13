@@ -1,5 +1,5 @@
-import { serialize } from 'next-mdx-remote/serialize'
 import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
 import Head from '../components/Head'
 import TextLink from '../components/TextLink'
 import FAQMarkdown from '../public/faq.md'

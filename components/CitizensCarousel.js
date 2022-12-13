@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import BigTitle from '../components/BigTitle'
-import InfiniteCarousel from '../components/InfiniteCarousel'
 import GradientBorderCard from '../components/GradientBorderCard'
+import InfiniteCarousel from '../components/InfiniteCarousel'
 
 export default function CitizensCarousel() {
   const citizens = [

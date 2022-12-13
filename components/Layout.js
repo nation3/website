@@ -1,14 +1,9 @@
-import { Fragment } from 'react'
-import { useRouter } from 'next/router'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Footer } from 'flowbite-react'
-import Link from 'next/link'
+import { Navbar } from 'flowbite-react'
 import Image from 'next/image'
-import Icon from '../public/icon.svg'
-import GradientLink from './GradientLink'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Script from 'next/script'
-import Announcement from './Announcement'
-import { Navbar, Button, Tooltip } from 'flowbite-react'
 import {
   FaDiscord,
   FaGithub,
@@ -16,6 +11,8 @@ import {
   FaVoteYea,
   FaBookOpen,
 } from 'react-icons/fa'
+import Icon from '../public/icon.svg'
+import Announcement from './Announcement'
 
 const navigation = [
   { name: 'Manifesto', href: '/manifesto' },
@@ -23,9 +20,6 @@ const navigation = [
   { name: 'FAQ', href: '/faq' },
   { name: 'Citizen app', href: 'https://app.nation3.org' },
 ]
-
-// main nav
-// manifesto, $nation, FAQ
 
 const NavigationItem = ({ children, href, currentPath }) => {
   return (

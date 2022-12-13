@@ -1,24 +1,24 @@
 import Image from 'next/image'
-import BigTitle from '../components/BigTitle'
 import Card from 'react-animated-3d-card-shadow'
-import Constitution from '../public/illustrations/constitution.svg'
-import ConstitutionText from '../public/illustrations/constitution-text.svg'
-import GradientLink from '../components/GradientLink'
-import { TextInput } from 'flowbite-react'
-import CitizensCarousel from '../components/CitizensCarousel'
 import BePart from '../components/BePart'
-import InternetNative from '../public/icons/jurisdiction/internet-native.svg'
-import Professional from '../public/icons/jurisdiction/professional.svg'
-import LimitedLiability from '../public/icons/jurisdiction/limited-liability.svg'
-import ChecksAndBalances from '../public/icons/jurisdiction/checks-balances.svg'
-import LegalStandards from '../public/icons/jurisdiction/legal-standards.svg'
-import EncryptedPrivate from '../public/icons/jurisdiction/encrypted-private.svg'
-import ReuseIcon from '../public/icons/jurisdiction/reuse.svg'
-import PickIcon from '../public/icons/jurisdiction/pick.svg'
-import AgreeIcon from '../public/icons/jurisdiction/agree.svg'
-import DisputeIcon from '../public/icons/jurisdiction/dispute.svg'
+import BigTitle from '../components/BigTitle'
 import Button from '../components/Button'
+import CitizensCarousel from '../components/CitizensCarousel'
+import GradientLink from '../components/GradientLink'
+import Head from '../components/Head'
 import LazyIframe from '../components/LazyIframe'
+import AgreeIcon from '../public/icons/jurisdiction/agree.svg'
+import ChecksAndBalances from '../public/icons/jurisdiction/checks-balances.svg'
+import DisputeIcon from '../public/icons/jurisdiction/dispute.svg'
+import EncryptedPrivate from '../public/icons/jurisdiction/encrypted-private.svg'
+import InternetNative from '../public/icons/jurisdiction/internet-native.svg'
+import LegalStandards from '../public/icons/jurisdiction/legal-standards.svg'
+import LimitedLiability from '../public/icons/jurisdiction/limited-liability.svg'
+import PickIcon from '../public/icons/jurisdiction/pick.svg'
+import Professional from '../public/icons/jurisdiction/professional.svg'
+import ReuseIcon from '../public/icons/jurisdiction/reuse.svg'
+import ConstitutionText from '../public/illustrations/constitution-text.svg'
+import Constitution from '../public/illustrations/constitution.svg'
 
 const FeatureItem = ({ icon, title, description }) => {
   return (
@@ -139,24 +139,13 @@ export default function Jurisdiction() {
       <div className="bg-gradient-to-r from-[#EAFFF4] to-[#EEF9FF] full-width my-16 lg:my-24 dark:bg-none px-4 xl:px-0">
         <div className="max-w-screen-xl m-auto text-center py-16 lg:py-32">
           <BigTitle gradientText="Sign up for launch phase whitelist" />
-          <div className="max-w-md m-auto">
+          <div className="max-w-md m-auto grid justify-items-center">
             <p className="m-auto mt-2 mb-8 dark:text-white">
               To be the first to experience a 21st-century jurisdiction.
             </p>
-            <div className="flex items-end mb-3">
-              <div className="relative w-full mr-3 revue-form-group">
-                <input
-                  className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-n3blue focus:border-n3blue block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                  placeholder="Your email"
-                  type="email"
-                />
-              </div>
-              <input
-                type="submit"
-                value="Sign up"
-                className="cursor-pointer text-white font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-gradient-to-r from-n3blue via-n3green to-n3green transition hover:scale-95"
-              />
-            </div>
+            <Button href="https://forms.gle/FJX5CGqiCnfny8196">
+              Sign up for launch
+            </Button>
           </div>
         </div>
       </div>

@@ -1,15 +1,15 @@
-import Head from '../components/Head'
-import BigTitle from '../components/BigTitle'
-import Quote from '../components/Quote'
 import Image from 'next/image'
-import Manifesto1 from '../public/manifesto/1.svg'
-import Manifesto2 from '../public/manifesto/2.svg'
-import Manifesto5 from '../public/manifesto/5.svg'
-import Manifesto6 from '../public/manifesto/6.svg'
+import BigTitle from '../components/BigTitle'
+import Head from '../components/Head'
+import Quote from '../components/Quote'
 import Nation1Icon from '../public/icons/nation1.svg'
 import Nation2Icon from '../public/icons/nation2.svg'
 import Nation3Icon from '../public/icons/nation3.svg'
 import TwitterIcon from '../public/icons/twitter.svg'
+import Manifesto1 from '../public/manifesto/1.svg'
+import Manifesto2 from '../public/manifesto/2.svg'
+import Manifesto5 from '../public/manifesto/5.svg'
+import Manifesto6 from '../public/manifesto/6.svg'
 
 export default function Manifesto() {
   return (

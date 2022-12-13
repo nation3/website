@@ -1,17 +1,13 @@
-import SolarpunkOrb from '../public/join/solarpunk-orb.png'
+import { MDXRemote } from 'next-mdx-remote'
+import { serialize } from 'next-mdx-remote/serialize'
 import Image from 'next/image'
+import { Pagination, Navigation, Keyboard } from 'swiper'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/react'
 import Head from '../components/Head'
 import TextLink from '../components/TextLink'
-import { ChevronDoubleRightIcon } from '@heroicons/react/outline'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Navigation, Keyboard } from 'swiper'
-import { serialize } from 'next-mdx-remote/serialize'
-import { MDXRemote } from 'next-mdx-remote'
-
-// Import Swiper styles
 import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
 
 const components = {
   a: (props) => (
