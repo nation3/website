@@ -85,8 +85,8 @@ export default function Layout({ children }) {
                 <NavigationItem href="https://app.nation3.org">
                   Citizen app
                 </NavigationItem>
-                <NavigationItem href="/faq" currentPath={path}>
-                  FAQ
+                <NavigationItem href="https://docs.nation3.org">
+                  Docs
                 </NavigationItem>
               </div>
             </Navbar.Collapse>
