@@ -116,7 +116,7 @@ export default function Layout({ children }) {
               <div className="mt-4 flex space-x-6 mt-0 justify-center">
                 {/*<FooterItem href="https://gov.nation3.org" icon={FaVoteYea} />*/}
                 <FooterItem href="https://github.com/nation3" icon={FaGithub} />
-                <FooterItem href="https://wiki.nation3.org" icon={FaBookOpen} />
+                <FooterItem href="https://docs.nation3.org" icon={FaBookOpen} />
               </div>
             </div>
           </div>
