@@ -15,7 +15,7 @@ export default function CitizensCarousel() {
       name: 'Sandeep Nailwal',
       role: 'Founder, Polygon',
       twitter: 'sandeepnailwal',
-      pic: 'https://coinagenda.com/wp-content/uploads/2021/10/Sandeep-Nailwal-small-360x360-1.jpg',
+      pic: 'https://pbs.twimg.com/profile_images/1607399509880979460/agkmH9Ct_400x400.jpg',
     },
     {
       name: 'Brayton Williams',
