@@ -15,7 +15,7 @@ export default function CitizensCarousel() {
       name: 'Sandeep Nailwal',
       role: 'Founder, Polygon',
       twitter: 'sandeepnailwal',
-      pic: 'https://pbs.twimg.com/profile_images/1571949221506420741/3aRt9iud_400x400.jpg',
+      pic: 'https://pbs.twimg.com/profile_images/1607399509880979460/agkmH9Ct_400x400.jpg',
     },
     {
       name: 'Brayton Williams',
@@ -51,7 +51,7 @@ export default function CitizensCarousel() {
       name: 'Alex Masmej',
       role: 'Founder, Showtime',
       twitter: 'AlexMasmej',
-      pic: 'https://pbs.twimg.com/profile_images/1585481031653564422/nuPwlIQ1_400x400.jpg',
+      pic: 'https://pbs.twimg.com/profile_images/1610851747685359616/FqpV0MGA_400x400.jpg',
     },
   ]
 
