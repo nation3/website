@@ -17,12 +17,20 @@ module.exports = withBundleAnalyzer({
       {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
+        port:'',
         pathname: '/profile_images/**',
       },
       {
         protocol: 'https',
         hostname: 'mirror-media.imgix.net',
+        port:'',
         pathname: '/publication-images/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.mirror-media.xyz',
+        port:'',
+        pathname: '**',
       },
     ],
   },

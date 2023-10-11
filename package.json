@@ -14,7 +14,7 @@
     "fetch-meta-tags": "1.0.12",
     "flowbite": "^1.5.1",
     "flowbite-react": "^0.1.5",
-    "next": "^13.0.6",
+    "next": "^13.5.4",
     "next-mdx-remote": "^4.1.0",
     "raw-loader": "^4.0.2",
     "react": "^18.2.0",
