@@ -97,7 +97,7 @@ export default function Layout({ children }) {
           <div className="w-full">
             <div className="w-full flex items-center justify-center gap-16">
               <div className="mt-4 flex space-x-6 mt-0 justify-center">
-                <FooterItem href="https://n3.gg/discord" icon={FaDiscord} />
+                <FooterItem href="https://discord.gg/nation3-690584551239581708" icon={FaDiscord} />
                 <FooterItem
                   href="https://forum.nation3.org"
                   icon={FaDiscourse}

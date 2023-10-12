@@ -95,12 +95,6 @@ export default function Jurisdiction() {
             </ul>
           </div>
           <div className="lg:w-7/12 lg:text-left w-full">
-            <div className="relative aspect-video my-8 lg:my-16 shadow-xl rounded-xl border border-n3green dark:border-none">
-              <LazyIframe
-                url="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&controls=0&showinfo=0&mute=1&playlist=0GEulicKACw"
-                title="test"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -137,17 +131,6 @@ export default function Jurisdiction() {
         />
       </div>
       <div className="bg-gradient-to-r from-[#EAFFF4] to-[#EEF9FF] full-width my-16 lg:my-24 dark:bg-none px-4 xl:px-0">
-        <div className="max-w-screen-xl m-auto text-center py-16 lg:py-32">
-          <BigTitle gradientText="Sign up for launch phase whitelist" />
-          <div className="max-w-md m-auto grid justify-items-center">
-            <p className="m-auto mt-2 mb-8 dark:text-white">
-              To be the first to experience a 21st-century jurisdiction.
-            </p>
-            <Button href="https://forms.gle/FJX5CGqiCnfny8196">
-              Sign up for launch
-            </Button>
-          </div>
-        </div>
       </div>
       <div className="text-center full-width bg-[url('/illustrations/constitution-bg-jurisdiction.svg')] bg-bottom bg-no-repeat bg-contain lg:mb-32 px-4 lg:px-0">
         <div className="max-w-screen-xl m-auto">
