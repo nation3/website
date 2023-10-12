@@ -78,12 +78,6 @@ export default function Home({ posts }) {
           the Internet, without resorting to traditional countries and endless
           bureaucracy.
         </p>
-        <div className="relative aspect-video mt-8 lg:mt-16 shadow-xl rounded-xl">
-          <LazyIframe
-            url="https://www.youtube.com/embed/0GEulicKACw?autoplay=1&loop=1&cc_load_policy=1rel=0&controls=0&showinfo=0&mute=1&playlist=0GEulicKACw&autoplay=1"
-            title="test"
-          />
-        </div>
         <GradientLink
           text="Read more"
           href="/jurisdiction"
