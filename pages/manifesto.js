@@ -26,6 +26,13 @@ export default function Manifesto() {
       />
       <div className="my-16">
         <Image src={Manifesto1} alt="" priority></Image>
+        <div className="relative aspect-video mt-8 lg:mt-16 shadow-xl">
+          <LazyIframe 
+            url="https://www.youtube.com/embed/7YysrP3xbdM?si=SD390vqdk6I5Wv0c"
+            title="Manifesto"
+            allow="accelerometer: gyroscope; picture-in-picture"
+            allowFullScreen
+          />
       </div>
       <div className="max-w-2xl m-auto my-8">
         <p className="md:-mx-1 mb-8">
