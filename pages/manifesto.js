@@ -2,6 +2,7 @@ import Image from 'next/image'
 import BigTitle from '../components/BigTitle'
 import Head from '../components/Head'
 import Quote from '../components/Quote'
+import LazyIframe from '../components/LazyIframe'
 import Nation1Icon from '../public/icons/nation1.svg'
 import Nation2Icon from '../public/icons/nation2.svg'
 import Nation3Icon from '../public/icons/nation3.svg'
@@ -26,14 +27,15 @@ export default function Manifesto() {
       />
       <div className="my-16">
         <Image src={Manifesto1} alt="" priority></Image>
-        <div className="relative aspect-video mt-8 lg:mt-16 shadow-xl">
+      </div>
+      <div className="relative aspect-video mt-8 lg:mt-16 shadow-xl">
           <LazyIframe 
             url="https://www.youtube.com/embed/7YysrP3xbdM?si=SD390vqdk6I5Wv0c"
             title="Manifesto"
             allow="accelerometer: gyroscope; picture-in-picture"
             allowFullScreen
           />
-      </div>
+      </div>    
       <div className="max-w-2xl m-auto my-8">
         <p className="md:-mx-1 mb-8">
           Ever since the inception of Homo Sapiens,{' '}
