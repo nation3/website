@@ -61,7 +61,7 @@ export default function Home({ posts }) {
           />
 
           <p className="max-w-md text-lg text-center dark:text-white my-2">
-            We are building a zero-tax, Web3-powered, solarpunk society. One that serves you, not the other way round.
+            A zero-tax, Web3-powered, solarpunk society. One that serves you, not the other way round.
           </p>
         </div>
       </div>
