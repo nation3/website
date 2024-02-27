@@ -60,7 +60,9 @@ export default function Jurisdiction() {
             sizeClasses="text-4xl md:text-5xl lg:text-6xl"
           />
           <p className="max-w-md m-auto mt-4 px-4 dark:text-white">
-            Enter agreements. As easy as tweeting.
+            Enter agreements. As easy as tweeting.<br />
+            <br />
+            <Button href="https://agreements.nation3.org" target="_blank">Create New Agreement</Button>
           </p>
         </div>
       </div>
